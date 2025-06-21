@@ -12,16 +12,16 @@ end
 function generate_depolarizing_samples(nvec,pvec, nsample)
     for n in nvec
         for p in pvec
-            generate_sample(iid_error(p/3,p/3,p/3,n), nsample, "data/depolarizing/data/n=$(n)_p=$(p)_nsample=$(nsample).txt",110)
+            filename = joinpath(@__DIR__, "data", "depolarizing", "data", "n=$(n)_p=$(p)_nsample=$(nsample).txt")
+            generate_sample(iid_error(p/3,p/3,p/3,n), nsample, filename,110)
         end
     end
 end
 
+# TODO: document the parameters!!!
 function get_depolarizing_data(n, p, nsample;ns = nothing)
-    filename = "data/depolarizing/data/n=$(n)_p=$(p)_nsample=$(nsample).txt"
-    if !isfile(filename)
-        generate_depolarizing_samples([n],[p], nsample)
-    end
+    filename = joinpath(@__DIR__, "data", "depolarizing", "data", "n=$(n)_p=$(p)_nsample=$(nsample).txt")
+    @assert isfile(filename) "Data file not found: $filename, please generate one with: `generate_depolarizing_samples($n, $p, $nsample)`"
 	data = readdlm(filename, Bool)
 	if isnothing(ns)
 		ns = nsample
