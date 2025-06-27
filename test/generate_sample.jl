@@ -9,7 +9,7 @@ using TensorQEC
     p = 0.1
     @test generate_sample(iid_error(p,p,p,nqubit),nsample,filename,110) isa Nothing
 
-    eq = get_depolarizing_data(nqubit,p,nsample;filename = filename)
+    eq = get_depolarizing_data(nsample,filename)
     @test eq isa Vector{CSSErrorPattern{Vector{Mod2}}}
     @test length(eq) == nsample
     @test length(eq[1].xerror) == nqubit
@@ -20,9 +20,9 @@ end
     nvec = [10,20]
     pvec = [0.1,0.2]
     nsample = 10
-    dirname = joinpath(@__DIR__, "data")
+    dirname = joinpath(@__DIR__, "tempfolder")
     mkpath(dirname)
-    @test generate_depolarizing_samples(nvec,pvec,nsample;dirname = dirname) isa Nothing
+    @test generate_depolarizing_samples(nvec,pvec,nsample,dirname) isa Nothing
     @test isfile(joinpath(dirname, "n=10_p=0.1_nsample=10.txt"))
     @test isfile(joinpath(dirname, "n=20_p=0.2_nsample=10.txt"))
     rm(dirname;recursive=true)
@@ -30,7 +30,7 @@ end
 
 @testset "generate_code_data" begin
     code = SurfaceCode(9,9)
-    dirname = joinpath(@__DIR__, "data/")
+    dirname = joinpath(@__DIR__, "tempfolder")
     mkpath(dirname)
     generate_code_data(code,dirname)
     @test isfile(joinpath(dirname, "pcm.txt"))
