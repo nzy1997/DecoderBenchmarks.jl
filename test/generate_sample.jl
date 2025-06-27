@@ -27,3 +27,14 @@ end
     @test isfile(joinpath(dirname, "n=20_p=0.2_nsample=10.txt"))
     rm(dirname;recursive=true)
 end
+
+@testset "generate_code_data" begin
+    code = SurfaceCode(9,9)
+    dirname = joinpath(@__DIR__, "data/")
+    mkpath(dirname)
+    generate_code_data(code,dirname)
+    @test isfile(joinpath(dirname, "pcm.txt"))
+    @test isfile(joinpath(dirname, "logical_x.txt"))
+    @test isfile(joinpath(dirname, "logical_z.txt"))
+    rm(dirname;recursive=true)
+end
