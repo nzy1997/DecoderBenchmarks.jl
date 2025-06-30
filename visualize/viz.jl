@@ -29,4 +29,4 @@ function draw(result_dir)
     save("visualize/time.svg", fig_time)
 end
 
-draw("data/result")
+draw("data/result/surface_BP")

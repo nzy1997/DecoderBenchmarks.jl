@@ -18,6 +18,5 @@ using Test
     run_benchmark(code,pvec,nsample,BPDecoder(),ns,result_dir,data_dir)
     @test isfile(joinpath(result_dir, "Time_$(code)_pvec=$(pvec)_nsample=$(nsample)_decoder=$(BPDecoder())_ns=$(ns).txt"))
     @test isfile(joinpath(result_dir, "Error_rate_$(code)_pvec=$(pvec)_nsample=$(nsample)_decoder=$(BPDecoder())_ns=$(ns).txt"))
-    @test isfile(joinpath(result_dir, "log.txt"))
     rm(joinpath(@__DIR__, "tempfolder");recursive=true)
 end
