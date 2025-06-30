@@ -38,3 +38,17 @@ end
     @test isfile(joinpath(dirname, "logical_z.txt"))
     rm(dirname;recursive=true)
 end
+
+@testset "generate_sample (flip) and read" begin
+    filename = joinpath(@__DIR__, "test.txt")
+    nsample = 10
+    nqubit = 20
+    p = 0.1
+    @test generate_sample(iid_error(p,nqubit),nsample,filename,110) isa Nothing
+
+    eq = DecoderBenchmarks.get_flip_data(nsample,filename)
+    @test eq isa Vector{Vector{Mod2}}
+    @test length(eq) == nsample
+    @test length(eq[1]) == nqubit
+    rm(filename)
+end

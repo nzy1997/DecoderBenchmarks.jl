@@ -12,6 +12,7 @@ The logical operators are saved to `joinpath(dirname, "logical_x.txt")` and `joi
 - `dirname::String`: The directory to save the data to.
 """
 function generate_code_data(code::TensorQEC.QuantumCode,dirname::String)
+    mkpath(dirname)
     tanner = CSSTannerGraph(code)
     bimat = TensorQEC.stabilizers2bimatrix(stabilizers(code)).matrix
     writedlm(joinpath(dirname, "pcm.txt"), Int.(bimat))

@@ -8,3 +8,4 @@ Manifest*.toml
 *.txt
 *.svg
 .DS_Store
+__pycache__/

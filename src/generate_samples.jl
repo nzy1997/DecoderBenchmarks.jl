@@ -20,6 +20,17 @@ function generate_sample(em::IndependentDepolarizingError, num_samples::Int, fil
     return nothing
 end
 
+function generate_sample(em::IndependentFlipError, num_samples::Int, filename::String, seed::Int)
+    data = zeros(Bool,num_samples,length(em.p))
+    Random.seed!(seed)
+    for i in 1:num_samples
+        error_qubits = random_error_qubits(em)
+        data[i,:] .= getfield.(error_qubits,:x)
+    end
+    writedlm(filename, Int.(data))
+    return nothing
+end
+
 """
     generate_depolarizing_samples(nvec::Vector{Int}, pvec::Vector{Float64}, nsample::Int, dirname::String; seed=110)
 
@@ -73,5 +84,14 @@ function get_depolarizing_data(ns::Int, filename::String)
     data = Mod2.(data)
     n = size(data, 2) ÷ 2
     eqs = [TensorQEC.CSSErrorPattern(data[i, 1:n], data[i, n+1:2n]) for i in 1:ns]
+    return eqs
+end
+
+
+function get_flip_data(ns::Int, filename::String)
+    @assert isfile(filename) "Data file not found: $filename, please generate one with: `generate_sample`"
+    data = readdlm(filename, Bool)
+    data = Mod2.(data)
+    eqs = [data[i,:] for i in 1:ns]
     return eqs
 end
