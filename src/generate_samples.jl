@@ -1,7 +1,7 @@
 """
     generate_sample(em::IndependentDepolarizingError, num_samples::Int,filename::String,seed::Int)
 
-Generate `num_samples` samples of the error model `em` and save them to `filename`.
+Generate `num_samples` samples of the error model `em` and save them to `filename`. The samples are saved as a matrix of size `num_samples` by `2 * num_qubits`. The first `num_qubits` columns are the Z error qubits and the last `num_qubits` columns are the X error qubits.
 
 ### Inputs
 - `em::IndependentDepolarizingError`: The error model to generate samples from.
@@ -14,7 +14,7 @@ function generate_sample(em::IndependentDepolarizingError, num_samples::Int, fil
     Random.seed!(seed)
     for i in 1:num_samples
         error_qubits = random_error_qubits(em)
-        data[i, :] .= (getfield.(error_qubits.xerror, :x)..., getfield.(error_qubits.zerror, :x)...)
+        data[i, :] .= (getfield.(error_qubits.zerror, :x)..., getfield.(error_qubits.xerror, :x)...)
     end
     writedlm(filename, Int.(data))
     return nothing
@@ -46,7 +46,7 @@ Generate `nsample` samples of the depolarizing error model for each `n` in `nvec
 function generate_depolarizing_samples(nvec::Vector{Int}, pvec::Vector{Float64}, nsample::Int, dirname::String; seed=110)
     for n in nvec
         for p in pvec
-            filename = joinpath(dirname, "n=$(n)_p=$(p)_nsample=$(nsample).txt")
+            filename = joinpath(dirname, "n=$(n)_p=$(p)_nsample=$(nsample).dat")
             generate_sample(iid_error(p / 3, p / 3, p / 3, n), nsample, filename, seed)
         end
     end
@@ -54,8 +54,8 @@ function generate_depolarizing_samples(nvec::Vector{Int}, pvec::Vector{Float64},
 end
 
 """
-    get_depolarizing_data(n::Int, p::Float64, nsample::Int, dirname::String;ns = nothing)
-    get_depolarizing_data(ns::Int,filename::String)
+    get_depolarizing_data(n::Int, p::Float64, nsample::Int, dirname::String)
+    get_depolarizing_data(filename::String)
 
 Get the data for the depolarizing error model for `n` qubits and `p` error probability and `ns` samples from `filename`.
 
@@ -63,19 +63,15 @@ Get the data for the depolarizing error model for `n` qubits and `p` error proba
 - `n::Int`: The number of qubits to generate samples for.
 - `p::Float64`: The error probability.
 - `nsample::Int`: The number of samples to generate.
-- `ns::Int`: The number of samples to return. If `ns` is not provided, all samples are returned.
 - `filename::String`: The file contains the samples.
 - `dirname::String`: The directory contains the samples.
 
 ### Outputs
 - `eqs::Vector{CSSErrorPattern{Vector{Mod2}}}`: The error patterns.
 """
-function get_depolarizing_data(n::Int, p::Float64, nsample::Int, dirname::String;ns = nothing)
-    filename = joinpath(dirname, "n=$(n)_p=$(p)_nsample=$(nsample).txt")
-    if isnothing(ns)
-        ns = nsample
-    end
-    return get_depolarizing_data(ns, filename)
+function get_depolarizing_data(n::Int, p::Float64, nsample::Int, dirname::String)
+    filename = joinpath(dirname, "n=$(n)_p=$(p)_nsample=$(nsample).dat")
+    return get_depolarizing_data(nsample, filename)
 end
 
 function get_depolarizing_data(ns::Int, filename::String)
@@ -83,7 +79,7 @@ function get_depolarizing_data(ns::Int, filename::String)
     data = readdlm(filename, Bool)
     data = Mod2.(data)
     n = size(data, 2) ÷ 2
-    eqs = [TensorQEC.CSSErrorPattern(data[i, 1:n], data[i, n+1:2n]) for i in 1:ns]
+    eqs = [TensorQEC.CSSErrorPattern(data[i, n+1:2n], data[i, 1:n]) for i in 1:ns]
     return eqs
 end
 

@@ -9,3 +9,6 @@ Manifest*.toml
 *.svg
 .DS_Store
 __pycache__/
+bin/conda
+env/
+*.ipynb

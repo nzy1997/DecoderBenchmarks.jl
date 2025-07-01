@@ -1,0 +1,8 @@
+#!/bin/bash
+FILE_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+ROOT_PATH=`dirname $FILE_PATH`
+BINDIR="$ROOT_PATH/bin"
+. $BINDIR/utils/constants.sh
+
+$ACTIVATE $FILE_PATH/env
+$FILE_PATH/env/bin/python $FILE_PATH/benchmark.py 

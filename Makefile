@@ -6,29 +6,19 @@ init:
 update:
 	$(JL) -e 'using Pkg; Pkg.update(); Pkg.precompile()'
 
-init-visualize:
-	$(JL) -e 'using Pkg; Pkg.activate("visualize"); Pkg.develop(path="."); Pkg.instantiate(); Pkg.precompile()'
+init-conda:
+	./bin/install_conda
 
-update-visualize:
-	$(JL) -e 'using Pkg; Pkg.activate("visualize"); Pkg.update(); Pkg.precompile()'
-
-make-data-path:
-	$(JL) -e 'using DecoderBenchmarks; mkpath("data/depolarizing"); mkpath("data/result")'
+init-ldpc:
+	./ldpc/setup
 
 generate-surface-samples:
-	$(JL) -e 'using DecoderBenchmarks; generate_depolarizing_samples(collect(3:2:21).^2, collect(0.01:0.01:0.2), 10000, "data/depolarizing")'
+	$(JL) -e 'using DecoderBenchmarks;using TensorQEC; mkpath(joinpath("data","depolarizing")); mkpath(joinpath("data","surface_code")); generate_depolarizing_samples(collect(3:2:21).^2, collect(0.01:0.01:0.2), 10000, joinpath("data","depolarizing")); for d in 3:2:21  generate_code_data(SurfaceCode(d,d),joinpath("data","surface_code"),"surface_code_$$d") end'
 
 run-benchmark-surface-BP:
-	$(JL) -e 'using DecoderBenchmarks;using TensorQEC; for d in $(dmax) run_benchmark(SurfaceCode(d,d), collect(0.01:0.01:0.2), 10000, BPDecoder(), 10000, "data/result/surface_BP", "data/depolarizing";log_file="log.txt") end'
+	$(JL) -e 'using DecoderBenchmarks;using TensorQEC; for d in 3:2:11 run_benchmark(SurfaceCode(d,d), collect(0.01:0.01:0.2), 10000, BPDecoder(), joinpath("data","surface_code","result","TensorQEC_BP"), joinpath("data","depolarizing");log_file="log.txt") end'
 
-plot:
-	$(JL) -e 'using Pkg; Pkg.activate("visualize"); include("visualize/viz.jl"); draw("data/result")'
+run-benchmark-ldpc-surface-BP:
+	./ldpc/run
 
-generate-BBcode-samples:
-	$(JL) -e 'using DecoderBenchmarks; generate_depolarizing_samples([144], [0.001], 10000, "data/depolarizing")'
-
-run-benchmark-BBcode-BP:
-	$(JL) -e 'using DecoderBenchmarks;using TensorQEC;run_benchmark(BivariateBicycleCode(6,12, ((3,0),(0,1),(0,2)), ((0,3),(1,0),(2,0))), [0.001], 10000, BPDecoder(), 10000, "data/result/BBcode", "data/depolarizing";log_file="log.txt")'
-
-
-.PHONY: init generate-depolarizing-samples update make-data-path init-visualize update-visualize plot generate-surface-samples run-benchmark-surface-BP generate-BBcode-samples run-benchmark-BBcode-BP
+.PHONY: init generate-depolarizing-samples update make-data-path generate-surface-samples run-benchmark-surface-BP

@@ -4,6 +4,7 @@ using DelimitedFiles
 using TensorQEC
 using Random
 using Dates
+import JSON
 
 export get_depolarizing_data, generate_depolarizing_samples, generate_sample
 
