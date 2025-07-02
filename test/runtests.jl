@@ -1,6 +1,10 @@
 using DecoderBenchmarks
 using Test
 
-@testset "DecoderBenchmarks.jl" begin
-    # Write your tests here.
+@testset "generate sample" begin
+    include("generate_sample.jl")
+end
+
+@testset "run benchmark" begin
+    include("runbenchmark.jl")
 end
