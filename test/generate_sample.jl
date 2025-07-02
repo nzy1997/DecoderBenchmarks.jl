@@ -1,6 +1,7 @@
 using Test
 using DecoderBenchmarks
 using TensorQEC
+using JSON
 
 @testset "generate_sample and read" begin
     filename = joinpath(@__DIR__, "test.dat")
