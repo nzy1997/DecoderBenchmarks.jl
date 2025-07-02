@@ -35,8 +35,8 @@ Then run the following command to run the benchmark:
 ```bash
 make run-benchmark-ldpc-surface-BP
 ```
-<!-- ## Samples
+## Samples
 
 Samples of the depolarizing channel are available at [OneDrive](https://hkustgz-my.sharepoint.com/:f:/g/personal/jinguoliu_hkust-gz_edu_cn/Eo4RiKqgPrFEj_ghttddtzwBrJb7Qajj2Q2CcZeTydAxyA?e=vrd9k1). The codes include:
 - Surface code with $d = 9$ and $d = 21$ (TODO: more).
-- BBCode [[144, 12, 12]]. -->
+- BBCode [[144, 12, 12]].
