@@ -2,10 +2,12 @@
 #set page(width: auto, height: auto, margin: 5pt)
 
 #let visualize-time(filename,label) = {
+    import draw: *
     let data = json(filename)
     let pvec = data.pvec
     let time_res = data.time_res
     plot.add(pvec.zip(time_res), label: label)
+    // plot.add(pvec.zip(time_res), label: label, style: (stroke: (paint: red, dash: "dashed")))
 }
 
 #let visualize-rate(filename,label) = {
@@ -18,7 +20,7 @@
 #let visualize-all() = {
     import draw: *
     plot.plot(size: (10, 10), axis-style: "scientific", {
-    for d in range(3,13,step:2){
+    for d in range(3,11,step:2){
         visualize-time("../data/surface_code/result/TensorQEC_BP/code=SurfaceCode("+str(d)+", " +str(d)+")_pvec=[0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]_nsample=10000_decoder=BPDecoder(100, true).json","TensorQEC BPOSD d="+str(d))
         visualize-time("../data/surface_code/result/ldpc/code=surface_code_"+str(d*d)+"_pvec=[0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]_nsample=10000_decoder=BpOsdDecoder.json","LDPC BPOSD d="+str(d))}
   })

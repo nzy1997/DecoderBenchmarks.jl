@@ -3,7 +3,7 @@
 *.jl.mem
 Manifest*.toml
 /docs/build/
-/data/
+data/
 .vscode/
 *.txt
 *.svg

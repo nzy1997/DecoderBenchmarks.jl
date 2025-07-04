@@ -32,7 +32,7 @@ function generate_sample(em::IndependentFlipError, num_samples::Int, filename::S
 end
 
 """
-    generate_depolarizing_samples(nvec::Vector{Int}, pvec::Vector{Float64}, nsample::Int, dirname::String; seed=110)
+    generate_depolarizing_samples(nvec::AbstractVector, pvec::AbstractVector, nsample::Int, dirname::String; seed=110)
 
 Generate `nsample` samples of the depolarizing error model for each `n` in `nvec` and `p` in `pvec` and save them to `joinpath(dirname, "n=\$(n)_p=\$(p)_nsample=\$(nsample).txt")`.
 
@@ -43,7 +43,7 @@ Generate `nsample` samples of the depolarizing error model for each `n` in `nvec
 - `dirname::String`: The directory to save the samples to.
 - `seed::Int`: The seed for the random number generator.
 """
-function generate_depolarizing_samples(nvec::Vector{Int}, pvec::Vector{Float64}, nsample::Int, dirname::String; seed=110)
+function generate_depolarizing_samples(nvec::AbstractVector, pvec::AbstractVector, nsample::Int, dirname::String; seed=110)
     for n in nvec
         for p in pvec
             filename = joinpath(dirname, "n=$(n)_p=$(p)_nsample=$(nsample).dat")

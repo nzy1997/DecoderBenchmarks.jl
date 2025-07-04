@@ -55,19 +55,19 @@ def run_bp_osd(H,e,error_rate,l):
             error_count += 1
     return time_sum/e.shape[0], error_count/e.shape[0]
 
-def run_benchmark(Hpath,pvec,nsample,result_dir,data_dir):
+def run_benchmark(Hpath,pvec,nsample,result_dir,data_dir,code_name):
     os.makedirs(result_dir, exist_ok=True)
     time_res = []
     error_rate = []
     H,l = load_code_data(Hpath)
     n = H.shape[1] // 2
     for p in pvec:
-        e = load_e(data_dir + f"n={n}_p={p}_nsample={nsample}.dat")
+        e = load_e(os.path.join(data_dir, f"n={n}_p={p}_nsample={nsample}.dat"))
         time_sum, error_count = run_bp_osd(H,e,p,l)
         time_res.append(time_sum)
         error_rate.append(error_count)
     data = { "pvec" : pvec, "nsample" : nsample, "time_res" : time_res, "error_rate" : error_rate }
-    with open(result_dir + f"/code=surface_code_{n}_pvec={pvec}_nsample={nsample}_decoder=BpOsdDecoder.json", "w") as f:
+    with open(os.path.join(result_dir, f"code={code_name}_pvec={pvec}_nsample={nsample}_decoder=BpOsdDecoder.json"), "w") as f:
         json.dump(data, f)
     return time_res, error_rate
 

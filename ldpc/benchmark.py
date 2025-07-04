@@ -1,4 +1,10 @@
 from functions import *
+import os
+import json
+pvec = os.environ.get("pvec")
+nsample = os.environ.get("nsample")
+folder = os.path.join(os.path.dirname(__file__), "data")
 
-for d in range(3,12,2):
-    run_benchmark(f"./data/surface_code/surface_code_{d}.json",[0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1,0.11,0.12,0.13,0.14,0.15,0.16,0.17,0.18,0.19,0.2],10000,f"./data/surface_code/result/ldpc/","./data/depolarizing/")
+for file in os.listdir(folder):
+    if os.path.isfile(os.path.join(folder, file)):
+        run_benchmark(os.path.join(folder, file),json.loads(pvec),int(nsample),os.path.join(os.path.dirname(__file__),"..","data","result","ldpc"),os.path.join(os.path.dirname(__file__),"..","data","depolarizing"),os.path.splitext(file)[0])
