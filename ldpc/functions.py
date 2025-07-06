@@ -66,7 +66,7 @@ def run_benchmark(Hpath,pvec,nsample,result_dir,data_dir,code_name):
         time_sum, error_count = run_bp_osd(H,e,p,l)
         time_res.append(time_sum)
         error_rate.append(error_count)
-    data = { "pvec" : pvec, "nsample" : nsample, "time_res" : time_res, "error_rate" : error_rate }
+    data = { "pvec" : pvec, "nsample" : nsample, "time_res" : time_res, "error_rate" : error_rate, "decoder" : "BpOsdDecoder", "code_name" : code_name}
     with open(os.path.join(result_dir, f"code={code_name}_pvec={pvec}_nsample={nsample}_decoder=BpOsdDecoder.json"), "w") as f:
         json.dump(data, f)
     return time_res, error_rate

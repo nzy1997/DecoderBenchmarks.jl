@@ -27,4 +27,7 @@ benchmark-ldpc:
 	./ldpc/run
 	rm -rf ldpc/data
 
-.PHONY: init generate-error-samples update make-data-path benchmark-TensorQEC benchmark-ldpc
+generate-plotting-data:
+	$(JL) -e 'include("visualize/generate_plotting_data.jl");select_files_with_pattern($(patterns))'
+
+.PHONY: init generate-error-samples update make-data-path benchmark-TensorQEC benchmark-ldpc generate-plotting-data

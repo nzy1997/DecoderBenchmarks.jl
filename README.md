@@ -61,6 +61,16 @@ codevec=[SurfaceCode(3,3),SurfaceCode(5,5),SurfaceCode(7,7)] pvec=[0.01,0.02] ns
 ```
 The results are saved in the `data/result/ldpc` directory as a json file with similar format as the `TensorQEC` results.
 
+
+## Visualization
+
+To visualize the results, run the following command:
+```bash
+patterns=[\"BPDecoder(100, true)\"] make generate-plotting-data
+```
+
+Here we filter the results to only include the patterns in the `patterns` variable and save the data in the `visualize/data/files.json` file. Then we can use the `visualize/viz.typ` file to visualize the results.
+
 ## Samples
 
 Samples of the depolarizing channel are available at [OneDrive](https://hkustgz-my.sharepoint.com/:f:/g/personal/jinguoliu_hkust-gz_edu_cn/Eo4RiKqgPrFEj_ghttddtzwBrJb7Qajj2Q2CcZeTydAxyA?e=vrd9k1). The codes include:
