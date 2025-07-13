@@ -1,4 +1,5 @@
 using JSON
+using DelimitedFiles
 
 function select_files_with_pattern(patterns::Vector{String};folder::String="data/result")
     matching_files = String[]
@@ -17,3 +18,18 @@ function select_files_with_pattern(patterns::Vector{String};folder::String="data
 end
 
 # a = select_files_with_pattern(["code=SurfaceCode","10000"])
+
+function collect_all_files_with_pattern(;folder::String="data/result")
+    rm(joinpath(@__DIR__, "../", "data/result", "files.txt"), force=true)
+    res_file = open(joinpath(@__DIR__, "../", "data/result", "files.txt"),"a")
+    for (root, dirs, files) in walkdir(folder)
+        for file in files
+            if file != "files.txt"
+                write(res_file,"$(joinpath(root, file))\n")
+            end
+        end
+    end
+    close(res_file)
+end
+
+collect_all_files_with_pattern()
