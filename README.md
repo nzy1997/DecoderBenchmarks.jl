@@ -64,12 +64,14 @@ The results are saved in the `data/result/ldpc` directory as a json file with si
 
 ## Visualization
 
-To visualize the results, run the following command:
+We can use the `visualize/viz.typ` file to visualize the results. `visualize-all` is a function that takes a list of tuples, each tuple contains some strings to filter the file names.
+
+For example, to visualize the results of the `TensorQEC` package with 10000 samples and the `BPDecoder` decoder and the BP decoder in the `ldpc` package, we can run the following command:
 ```bash
-patterns=[\"BPDecoder(100, true)\"] make generate-plotting-data
+visualize-all((("TensorQEC","10000","BP"),("ldpc","10000","BpOsdDecoder")))
 ```
 
-Here we filter the results to only include the patterns in the `patterns` variable and save the data in the `visualize/data/files.json` file. Then we can use the `visualize/viz.typ` file to visualize the results.
+This will find all the files in the `data/result` directory that include the strings "TensorQEC", "10000", "BP" or "ldpc", "10000", "BpOsdDecoder" and plot the results.
 
 ## Samples
 

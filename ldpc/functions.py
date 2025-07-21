@@ -69,5 +69,8 @@ def run_benchmark(Hpath,pvec,nsample,result_dir,data_dir,code_name):
     data = { "pvec" : pvec, "nsample" : nsample, "time_res" : time_res, "error_rate" : error_rate, "decoder" : "BpOsdDecoder", "code_name" : code_name}
     with open(os.path.join(result_dir, f"code={code_name}_pvec={pvec}_nsample={nsample}_decoder=BpOsdDecoder.json"), "w") as f:
         json.dump(data, f)
+
+    with open(os.path.join(result_dir,"..","files.txt"), "a") as f:
+        f.write(f"data/result/ldpc/code={code_name}_pvec={pvec}_nsample={nsample}_decoder=BpOsdDecoder.json\n")
     return time_res, error_rate
 

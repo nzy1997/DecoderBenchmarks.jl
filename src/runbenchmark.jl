@@ -21,7 +21,7 @@ Run the benchmark for the decoder `decoder` on the code `code` with the error pr
 - `time_res::Vector{Float64}`: The average time of the decoder.
 - `error_rate::Vector{Float64}`: The error rate of the decoder.
 """
-function run_benchmark(code::TensorQEC.QuantumCode,pvec::AbstractVector,nsample::Int,decoder::TensorQEC.AbstractDecoder,result_dir::String,data_dir::String;log_file = nothing, filename_prefix = nothing)
+function run_benchmark(code::TensorQEC.QuantumCode,pvec::AbstractVector,nsample::Int,decoder::TensorQEC.AbstractDecoder,result_dir::String,data_dir::String;log_file = nothing, filename_prefix = nothing, relative_path = nothing)
     time_res = Float64[]
     error_rate = Float64[]
     tanner = CSSTannerGraph(code)
@@ -53,15 +53,15 @@ function run_benchmark(code::TensorQEC.QuantumCode,pvec::AbstractVector,nsample:
     write(joinpath(result_dir, "code=$(code)_pvec=$(pvec)_nsample=$(nsample)_decoder=$(decoder).json"), JSON.json(data))
     if !isnothing(filename_prefix)
         file = open(filename_prefix,"a")
-        write(file, "$(result_dir)/code=$(code)_pvec=$(pvec)_nsample=$(nsample)_decoder=$(decoder).json\n")
+        write(file, "$(relative_path)/code=$(code)_pvec=$(pvec)_nsample=$(nsample)_decoder=$(decoder).json\n")
         close(file)
     end
     return (;time_res, error_rate)
 end
 
-function run_benchmark(codevec::AbstractVector,pvec::AbstractVector,nsample::Int,decoder::TensorQEC.AbstractDecoder,result_dir::String,data_dir::String;log_file = nothing, filename_prefix = nothing)
+function run_benchmark(codevec::AbstractVector,pvec::AbstractVector,nsample::Int,decoder::TensorQEC.AbstractDecoder,result_dir::String,data_dir::String;log_file = nothing, filename_prefix = nothing, relative_path = nothing)
     for code in codevec
-        run_benchmark(code,pvec,nsample,decoder,result_dir,data_dir;log_file=log_file, filename_prefix=filename_prefix)
+        run_benchmark(code,pvec,nsample,decoder,result_dir,data_dir;log_file=log_file, filename_prefix=filename_prefix, relative_path=relative_path)
     end
     return nothing
 end
