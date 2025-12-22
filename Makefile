@@ -33,4 +33,7 @@ generate-plotting-data:
 benchmark-TensorQEC-Gurobi:
 	$(JL) -e 'using DecoderBenchmarks,Gurobi;using TensorQEC; run_benchmark($(codevec), $(pvec), $(nsample), IPDecoder(Gurobi.Optimizer,false), joinpath(@__DIR__,"data","result","TensorQEC"), joinpath(@__DIR__,"data","depolarizing");log_file="log.txt", filename_prefix=joinpath(@__DIR__,"data","result","files.txt"), relative_path="data/result/TensorQEC")'
 
+benchmark-ldpc-benchcode:
+	./ldpc/run
+
 .PHONY: init generate-error-samples update make-data-path benchmark-TensorQEC benchmark-ldpc generate-plotting-data

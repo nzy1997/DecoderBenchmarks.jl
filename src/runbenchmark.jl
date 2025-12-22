@@ -39,7 +39,8 @@ function run_benchmark(code::TensorQEC.QuantumCode,pvec::AbstractVector,nsample:
             deres = decode(ct, syn)
             time_end = time()
             time_sum += time_end - time_start
-            check_logical_error(deres.error_qubits,eq,lx,lz) && (error_count += 1)
+            @assert syn == syndrome_extraction(deres.error_pattern,tanner)
+            check_logical_error(deres.error_pattern,eq,lx,lz) && (error_count += 1)
         end
         push!(time_res,time_sum/nsample)
         push!(error_rate,error_count/nsample)

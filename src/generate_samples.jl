@@ -13,7 +13,7 @@ function generate_sample(em::IndependentDepolarizingError, num_samples::Int, fil
     data = zeros(Bool, num_samples, 2 * length(em.px))
     Random.seed!(seed)
     for i in 1:num_samples
-        error_qubits = random_error_qubits(em)
+        error_qubits = random_error_pattern(em)
         data[i, :] .= (getfield.(error_qubits.zerror, :x)..., getfield.(error_qubits.xerror, :x)...)
     end
     writedlm(filename, Int.(data))
@@ -24,7 +24,7 @@ function generate_sample(em::IndependentFlipError, num_samples::Int, filename::S
     data = zeros(Bool,num_samples,length(em.p))
     Random.seed!(seed)
     for i in 1:num_samples
-        error_qubits = random_error_qubits(em)
+        error_qubits = random_error_pattern(em)
         data[i,:] .= getfield.(error_qubits,:x)
     end
     writedlm(filename, Int.(data))

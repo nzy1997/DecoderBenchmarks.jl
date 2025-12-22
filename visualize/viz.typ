@@ -41,13 +41,16 @@
 
 #figure(canvas({
   import draw: *
-  visualize-all((("TensorQEC","10000","IP"),("ldpc","10000")))
+  // visualize-all((("TensorQEC","10000","IP"),("ldpc","10000")))
+
+  // set-origin((0,-12))
+  // visualize-all((("TensorQEC","100","BP"),("ldpc","10000")))
+
+  // set-origin((0,-12))
+  // visualize-all((("TensorQEC","10000","TN"),("TensorQEC","10000","IP")))
 
   set-origin((0,-12))
-  visualize-all((("TensorQEC","100","BP"),("ldpc","10000")))
-
-  set-origin((0,-12))
-  visualize-all((("TensorQEC","10000","TN"),("TensorQEC","10000","IP")))
+   visualize-all((("ldpc","10000","color"),("TensorQEC","10000","color")))
 }))
 
 

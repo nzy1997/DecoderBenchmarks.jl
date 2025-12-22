@@ -5,7 +5,11 @@ import numpy as np
 pvec = os.environ.get("pvec")
 nsample = os.environ.get("nsample")
 folder = os.path.join(os.path.dirname(__file__), "data")
-
+if os.path.isdir(folder):
+    pass
+else:
+    folder = os.path.join(os.path.dirname(__file__), "benchcodes")
+    
 pvec = eval(pvec)
 if isinstance(pvec, np.ndarray):
     pvec = pvec.tolist()

@@ -1,7 +1,7 @@
 name = "DecoderBenchmarks"
 uuid = "3bf0baa3-530d-4515-bb33-a07a4dee922a"
-authors = ["nzy1997"]
 version = "1.0.0-DEV"
+authors = ["nzy1997"]
 
 [deps]
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
@@ -10,6 +10,9 @@ Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 TensorQEC = "0500ac79-7fb5-4262-aaea-37bb1845d1ef"
+
+[sources]
+TensorQEC = {path = "/Users/nizhongyi/jcode/TensorQEC.jl"}
 
 [compat]
 Dates = "1"
