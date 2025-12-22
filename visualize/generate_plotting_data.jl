@@ -1,6 +1,7 @@
 using JSON
 using DelimitedFiles
 using CairoMakie
+include("sinter_like_fit_binomial.jl")
 
 function select_files_with_pattern(patterns::Vector{String};folder::String="../data/result")
     matching_files = String[]
@@ -218,8 +219,6 @@ function draw_fig5()
         pvec = data["pvec"]
         time_res = data["time_res"]
         error_rate = data["error_rate"]
-        error_rate[1] = 2.9e-5
-        error_rate[2] = 0.000284
         @show error_rate
         scatterlines!(ax, pvec, error_rate,label = "Toric, sample = $(data["nsample"])",linestyle=:dashdot)
         scatterlines!(ax2, pvec, time_res, label=filename)
@@ -231,4 +230,45 @@ function draw_fig5()
 end
 
 fig = draw_fig5()
-save("fig.png", fig)
+# save("fig.png", fig)
+
+function draw_fig6()
+    fig = Figure(size = (1000, 400))
+    ax = Axis(fig[1,1],xscale = log10,yscale = log10, xlabel = "Physical error rate", ylabel = "Logical error rate", title = "cg = 10, qubit_num = 1400, bb code x^-1*y")
+    ax2 = Axis(fig[1,2],xscale = log10,yscale = log10, xlabel = "Physical error rate", ylabel = "decoding time per sample(ms)", title = "cg = 10, qubit_num = 1400, bb code x^-1*y")
+
+    # a = select_files_with_pattern(["code=bb","100000","Bp"])
+    # for filename in a
+    #     data = JSON.parsefile(filename)
+    #     @show data
+    #     pvec = data["pvec"]
+    #     time_res = data["time_res"]
+    #     error_rate = data["error_rate"]
+    #     @show error_rate
+    #     scatterlines!(ax, pvec, error_rate,label = "BP-OSD0, sample = $(data["nsample"])",linestyle=:dash)
+    #     scatterlines!(ax2, pvec, time_res, label=filename)
+    # end
+
+    a = select_files_with_pattern(["code=bb","100000","TToricDecoder(Matching)","workers=4"])
+    for filename in a
+
+        data = JSON.parsefile(filename)
+        pvec = data["pvec"]
+        time_res = data["time_res"]
+        # error_rate = data["error_rate"]
+        nsim = Int.(data["nsim"])
+        error_count = Int.(data["error_count"])
+        lows, avs, highs = sinter_like_fit_binomial(nsim, error_count, 1000.0)
+        errorbars!(ax,pvec, avs, lows, highs,
+        color = range(0, 1, length = length(pvec)),
+        whiskerwidth = 10)
+        scatterlines!(ax, pvec, avs,label = "Toric, sample = $(data["nsample"])",linestyle=:dashdot)
+        scatterlines!(ax2, pvec, time_res, label=filename)
+    end
+    # axislegend(ax; position = :lt, labelsize = 15)
+    # axislegend(ax2; position = :lt, labelsize = 15)
+    fig[1, 3] = Legend(fig, ax,)
+    fig
+end
+
+fig = draw_fig6()

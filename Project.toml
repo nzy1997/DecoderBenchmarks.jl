@@ -6,6 +6,7 @@ authors = ["nzy1997"]
 [deps]
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+Distributed = "8ba89e20-285c-5b6f-9357-94700520ee1b"
 Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
@@ -17,6 +18,7 @@ TensorQEC = {path = "/Users/nizhongyi/jcode/TensorQEC.jl"}
 [compat]
 Dates = "1"
 DelimitedFiles = "1"
+Distributed = "1"
 Gurobi = "1"
 JSON = "0.21"
 Random = "1"

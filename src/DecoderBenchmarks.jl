@@ -1,6 +1,7 @@
 module DecoderBenchmarks
 
 using DelimitedFiles
+using Distributed
 using TensorQEC
 using Random
 using Dates

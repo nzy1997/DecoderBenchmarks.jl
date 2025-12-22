@@ -21,3 +21,7 @@ nvec=[1400] pvec=[0.001,0.002,0.005,0.008,0.01,0.015,0.02] nsample=100000 make g
 nvec=[1400] pvec=[0.001,0.002] nsample=1000000 make generate-error-samples
 
 pvec=[0.001,0.002] nsample=1000000 make benchmark-ldpc-benchcode
+
+
+julia -p4 
+

@@ -1,4 +1,5 @@
 JL = julia --project
+maxerror ?= $(nsample)
 
 init:
 	$(JL) -e 'using Pkg; Pkg.instantiate()'
@@ -19,7 +20,7 @@ generate-code-data:
 	$(JL) -e 'using DecoderBenchmarks;using TensorQEC; generate_code_data($(codevec),joinpath(@__DIR__,"data","codes"))'
 
 benchmark-TensorQEC:
-	$(JL) -e 'using DecoderBenchmarks;using TensorQEC; run_benchmark($(codevec), $(pvec), $(nsample), $(decoder), joinpath(@__DIR__,"data","result","TensorQEC"), joinpath(@__DIR__,"data","depolarizing");log_file="log.txt", filename_prefix=joinpath(@__DIR__,"data","result","files.txt"), relative_path="data/result/TensorQEC")'
+	$(JL) -e 'using DecoderBenchmarks;using TensorQEC; run_benchmark($(codevec), $(pvec), $(nsample), $(maxerror), $(decoder), joinpath(@__DIR__,"data","result","TensorQEC");log_file="log.txt", filename_prefix=joinpath(@__DIR__,"data","result","files.txt"), relative_path="data/result/TensorQEC")'
 
 benchmark-ldpc:
 	mkdir -p ldpc/data
@@ -31,7 +32,7 @@ generate-plotting-data:
 	$(JL) -e 'include(joinpath(@__DIR__,"visualize","generate_plotting_data.jl"));select_files_with_pattern($(patterns))'
 
 benchmark-TensorQEC-Gurobi:
-	$(JL) -e 'using DecoderBenchmarks,Gurobi;using TensorQEC; run_benchmark($(codevec), $(pvec), $(nsample), IPDecoder(Gurobi.Optimizer,false), joinpath(@__DIR__,"data","result","TensorQEC"), joinpath(@__DIR__,"data","depolarizing");log_file="log.txt", filename_prefix=joinpath(@__DIR__,"data","result","files.txt"), relative_path="data/result/TensorQEC")'
+	$(JL) -e 'using DecoderBenchmarks,Gurobi;using TensorQEC; run_benchmark($(codevec), $(pvec), $(nsample), $(maxerror), IPDecoder(Gurobi.Optimizer,false), joinpath(@__DIR__,"data","result","TensorQEC");log_file="log.txt", filename_prefix=joinpath(@__DIR__,"data","result","files.txt"), relative_path="data/result/TensorQEC")'
 
 benchmark-ldpc-benchcode:
 	./ldpc/run
