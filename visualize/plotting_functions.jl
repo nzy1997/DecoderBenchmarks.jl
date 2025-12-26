@@ -1,4 +1,7 @@
 using SpecialFunctions: loggamma
+using JSON
+using DelimitedFiles
+using CairoMakie
 
 function sinter_like_fit_binomial(n::Integer, k::Integer, h::Real=1000.0)
     @assert n > 0 "n must be positive"
@@ -70,4 +73,36 @@ function sinter_like_fit_binomial(n::Vector, k::Vector, h::Real=1000.0)
         lows[i], avs[i], highs[i] = sinter_like_fit_binomial(n[i], k[i], h)
     end
     return lows, avs, highs
+end
+
+function prepare_errorbar_data(avs::AbstractVector, lows::AbstractVector, highs::AbstractVector; eps_scale::Float64=1e-3, eps_min::Float64=floatmin(Float64))
+    ylow = avs .- lows
+    yhigh = highs .- avs
+    mask = (avs .== 0) .& (highs .> 0)
+    avs_plot = avs
+    if any(mask)
+        pos_highs = highs[highs .> 0]
+        eps = isempty(pos_highs) ? eps_min : max(eps_min, minimum(pos_highs) * eps_scale)
+        avs_plot = copy(avs)
+        avs_plot[mask] .= eps
+        ylow[mask] .= 0.0
+        yhigh[mask] .= highs[mask] .- eps
+    end
+    return avs_plot, ylow, yhigh
+end
+
+function select_files_with_pattern(patterns::Vector{String};folder::String="../data/result")
+    matching_files = String[]
+    file_count = 0
+    for (root, dirs, files) in walkdir(folder)
+        for file in files
+            if all(occursin(pattern, file) for pattern in patterns)
+                file_count += 1
+                push!(matching_files, joinpath(root, file))
+            end
+        end
+    end
+    data = Dict("file_count" => file_count, "files" => matching_files)
+    # write(joinpath(@__DIR__, "../data", "files.json"), JSON.json(data))
+    return matching_files
 end

@@ -29,7 +29,7 @@ To benchmark the performance of the codes or decoders, you can run the benchmark
 ```bash
 codevec=[SurfaceCode(3,3),SurfaceCode(5,5),SurfaceCode(7,7)] pvec=[0.01,0.02] nsample=100 maxerror=100 decoder="BPDecoder()" make benchmark-TensorQEC
 ```
-The `decoder` is the decoder to use. The benchmark results are saved in the `data/result/TensorQEC` directory as a json file, named as `code=code_name_pvec=pvec_nsample=nsample_maxerror=maxerror_workers=workers_decoder=decoder.json`. The information includes
+The `decoder` is the decoder to use. The benchmark results are saved in the `data/result/TensorQEC` directory as a json file, named as `code=code_name_pmin=pmin_pmax=pmax_nsample=nsample_maxerror=maxerror_workers=workers_decoder=decoder.json`. The information includes
 - `code_name`: The name of the code.
 - `pvec`: The error probabilities.
 - `nsample`: The number of samples.

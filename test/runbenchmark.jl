@@ -14,8 +14,10 @@ using JSON
 
     run_benchmark(code,pvec,max_sim,max_error,BPDecoder(),result_dir)
     worker_count = 1
-    @test isfile(joinpath(result_dir, "code=$(code)_pvec=$(pvec)_nsample=$(max_sim)_maxerror=$(max_error)_workers=$(worker_count)_decoder=$(BPDecoder()).json"))
-    data = JSON.parsefile(joinpath(result_dir, "code=$(code)_pvec=$(pvec)_nsample=$(max_sim)_maxerror=$(max_error)_workers=$(worker_count)_decoder=$(BPDecoder()).json"))
+    pmin = minimum(pvec)
+    pmax = maximum(pvec)
+    @test isfile(joinpath(result_dir, "code=$(code)_pmin=$(pmin)_pmax=$(pmax)_nsample=$(max_sim)_maxerror=$(max_error)_workers=$(worker_count)_decoder=$(BPDecoder()).json"))
+    data = JSON.parsefile(joinpath(result_dir, "code=$(code)_pmin=$(pmin)_pmax=$(pmax)_nsample=$(max_sim)_maxerror=$(max_error)_workers=$(worker_count)_decoder=$(BPDecoder()).json"))
     @test data["code_name"] == "$code"
     @test data["pvec"] == pvec
     @test data["nsample"] == max_sim
