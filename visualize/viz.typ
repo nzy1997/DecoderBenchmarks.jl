@@ -1,38 +1,56 @@
-#import "@preview/cetz:0.2.2": canvas, draw, tree, plot
+#import "@preview/cetz:0.4.0": canvas, draw, tree
+#import "@preview/cetz-plot:0.1.2": plot
 #set page(width: auto, height: auto, margin: 5pt)
 
-#let visualize-time(filename,label) = {
-    let data = json(filename)
-    let pvec = data.pvec
-    let time_res = data.time_res
-    plot.add(pvec.zip(time_res), label: label)
-}
-
-#let visualize-rate(filename,label) = {
-    let data = json(filename)
-    let pvec = data.pvec
-    let error_rate = data.error_rate
-    plot.add(pvec.zip(error_rate), label: label)
-}
-
-#let visualize-all() = {
+#let visualize-line(filename,field_name,color) = {
     import draw: *
-    plot.plot(size: (10, 10), axis-style: "scientific", {
-    for d in range(3,13,step:2){
-        visualize-time("../data/surface_code/result/TensorQEC_BP/code=SurfaceCode("+str(d)+", " +str(d)+")_pvec=[0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]_nsample=10000_decoder=BPDecoder(100, true).json","TensorQEC BPOSD d="+str(d))
-        visualize-time("../data/surface_code/result/ldpc/code=surface_code_"+str(d*d)+"_pvec=[0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]_nsample=10000_decoder=BpOsdDecoder.json","LDPC BPOSD d="+str(d))}
-  })
-    set-origin((17,0))
-        plot.plot(size: (10, 10), axis-style: "scientific", {
-    for d in range(3,13,step:2){
-        visualize-rate("../data/surface_code/result/TensorQEC_BP/code=SurfaceCode("+str(d)+", " +str(d)+")_pvec=[0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]_nsample=10000_decoder=BPDecoder(100, true).json","TensorQEC BPOSD d="+str(d))
-        visualize-rate("../data/surface_code/result/ldpc/code=surface_code_"+str(d*d)+"_pvec=[0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2]_nsample=10000_decoder=BpOsdDecoder.json","LDPC BPOSD d="+str(d))}
-  })
+    let data = json("../"+filename)
+    let pvec = data.pvec
+    let time_res = if field_name == "time_res" { data.time_res.map(x => 1000 * x) } else { data.error_rate }
+    let label = data.code_name + " " + data.decoder
+
+
+    // plot.add(pvec.zip(time_res), label: label, style: (stroke: (paint: color)))
+
+    plot.add(pvec.zip(time_res), label: label)
+
+    // if data.decoder == "BPDecoder(100, true)"{
+    // plot.add(pvec.zip(time_res), label: label,style: (stroke: (paint: red, dash: "dashed")))
+    // } else {
+    //     plot.add(pvec.zip(time_res), label: label,style: (stroke: (paint: black)))
+    // }
+}
+
+#let visualize-all(name_vecs) = {
+    import draw: *
+    let file_content = read("../data/result/files.txt")
+    let files = file_content.split("\n").filter(line => line != "")
+    let files = files.filter(file => name_vecs.any(name_vec => name_vec.all(x => file.contains(x))))
+    
+    plot.plot(size: (10, 10), axis-style: "scientific",x-label: "Physical error rate",y-label: "Decoding time per sample(ms)", y-mode: "log", y-base: 10, {
+    for file in files{
+        visualize-line(file,"time_res",red)
+    }})
+    set-origin((25,0))
+    plot.plot(size: (10, 10), axis-style: "scientific",x-label: "Physical error rate",y-label: "Logical error rate", {
+    for file in files{
+    visualize-line(file,"error_rate",black)
+    }})
+    set-origin((-25,0))
   }
 
 #figure(canvas({
   import draw: *
-  visualize-all()
+  // visualize-all((("TensorQEC","10000","IP"),("ldpc","10000")))
+
+  // set-origin((0,-12))
+  // visualize-all((("TensorQEC","100","BP"),("ldpc","10000")))
+
+  // set-origin((0,-12))
+  // visualize-all((("TensorQEC","10000","TN"),("TensorQEC","10000","IP")))
+
+  set-origin((0,-12))
+   visualize-all((("ldpc","10000","color"),("TensorQEC","10000","color")))
 }))
 
 

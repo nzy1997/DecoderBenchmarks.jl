@@ -1,5 +1,6 @@
 import os
 
+import numpy as np
 from functions import run_benchmark
 
 
@@ -22,11 +23,13 @@ def run_selected_files(code_files, pvec, max_sim, max_error, workers, log_file):
 def main():
     project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     code_files = [
-        os.path.join(project_root, "data", "codes", "bbx^-1y_10.json"),
+        os.path.join(project_root, "data", "codes", "SurfaceCode(3, 3).json"),
+        os.path.join(project_root, "data", "codes", "SurfaceCode(5, 5).json"),
+        os.path.join(project_root, "data", "codes", "SurfaceCode(7, 7).json"),
     ]
-    pvec = [0.0001,0.0002,0.0005,0.001,0.002,0.005,0.008,0.01,0.015,0.02]
-    max_sim = 1000000
-    max_error = 500
+    pvec = np.arange(0.01, 0.21, 0.01).tolist()
+    max_sim = 100
+    max_error = 100
     workers = 6
     log_file = os.path.join(project_root, "log.txt")
 

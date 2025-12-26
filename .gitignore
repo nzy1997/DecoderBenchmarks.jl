@@ -3,7 +3,7 @@
 *.jl.mem
 Manifest*.toml
 /docs/build/
-/data/
+data/
 .vscode/
 *.txt
 *.svg
@@ -12,3 +12,5 @@ __pycache__/
 bin/conda
 env/
 *.ipynb
+ldpc/benchcodes/
+visualize/images

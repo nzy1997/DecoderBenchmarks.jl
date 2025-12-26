@@ -27,3 +27,10 @@ function generate_code_data(code::TensorQEC.QuantumCode,dirname::String,filename
     write(joinpath(dirname, filename*".json"), JSON.json(data))
     return nothing
 end
+
+function generate_code_data(code_vec::AbstractVector,dirname::String)
+    for code in code_vec
+        generate_code_data(code,dirname,"$(code)")
+    end
+    return nothing
+end

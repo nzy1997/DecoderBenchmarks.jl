@@ -13,7 +13,7 @@ function generate_sample(em::IndependentDepolarizingError, num_samples::Int, fil
     data = zeros(Bool, num_samples, 2 * length(em.px))
     Random.seed!(seed)
     for i in 1:num_samples
-        error_qubits = random_error_qubits(em)
+        error_qubits = random_error_pattern(em)
         data[i, :] .= (getfield.(error_qubits.zerror, :x)..., getfield.(error_qubits.xerror, :x)...)
     end
     writedlm(filename, Int.(data))
@@ -24,7 +24,7 @@ function generate_sample(em::IndependentFlipError, num_samples::Int, filename::S
     data = zeros(Bool,num_samples,length(em.p))
     Random.seed!(seed)
     for i in 1:num_samples
-        error_qubits = random_error_qubits(em)
+        error_qubits = random_error_pattern(em)
         data[i,:] .= getfield.(error_qubits,:x)
     end
     writedlm(filename, Int.(data))
@@ -32,7 +32,7 @@ function generate_sample(em::IndependentFlipError, num_samples::Int, filename::S
 end
 
 """
-    generate_depolarizing_samples(nvec::Vector{Int}, pvec::Vector{Float64}, nsample::Int, dirname::String; seed=110)
+    generate_depolarizing_samples(nvec::AbstractVector, pvec::AbstractVector, nsample::Int, dirname::String; seed=110)
 
 Generate `nsample` samples of the depolarizing error model for each `n` in `nvec` and `p` in `pvec` and save them to `joinpath(dirname, "n=\$(n)_p=\$(p)_nsample=\$(nsample).txt")`.
 
@@ -43,7 +43,7 @@ Generate `nsample` samples of the depolarizing error model for each `n` in `nvec
 - `dirname::String`: The directory to save the samples to.
 - `seed::Int`: The seed for the random number generator.
 """
-function generate_depolarizing_samples(nvec::Vector{Int}, pvec::Vector{Float64}, nsample::Int, dirname::String; seed=110)
+function generate_depolarizing_samples(nvec::AbstractVector, pvec::AbstractVector, nsample::Int, dirname::String; seed=110)
     for n in nvec
         for p in pvec
             filename = joinpath(dirname, "n=$(n)_p=$(p)_nsample=$(nsample).dat")
