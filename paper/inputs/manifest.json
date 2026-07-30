@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "code_family": "bbx^-1y",
+  "distances": {
+    "4": {
+      "archive": "d4.tar.gz",
+      "sha256": "485bc74c337382869fad808c90f84234cd6f7c88ba443cec577102169a6692b7",
+      "members": [
+        "check_matrix.txt",
+        "column_transformation.txt",
+        "row_transformation.txt"
+      ]
+    },
+    "6": {
+      "archive": "d6.tar.gz",
+      "sha256": "57c603043cdef4efced374b03d4b96a3e282da065e5681195498577b629e2e04",
+      "members": [
+        "check_matrix.txt",
+        "column_transformation.txt",
+        "row_transformation.txt"
+      ]
+    },
+    "8": {
+      "archive": "d8.tar.gz",
+      "sha256": "29fde852f3d4c52361f5e09cb378eaadfce43e1b90be0bc29eea3e014c189690",
+      "members": [
+        "check_matrix.txt",
+        "column_transformation.txt",
+        "row_transformation.txt"
+      ]
+    },
+    "10": {
+      "archive": "d10.tar.gz",
+      "sha256": "241eccc051c5183808831f71ece49cda413b778e6dd78f6e2fc21b6ee3f2bc64",
+      "members": [
+        "check_matrix.txt",
+        "column_transformation.txt",
+        "row_transformation.txt"
+      ]
+    }
+  }
+}
