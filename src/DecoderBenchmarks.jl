@@ -19,9 +19,12 @@ export materialize_paper_input
 export PaperBenchmarkConfig, paper_benchmark_config, paper_seed
 export paper_decoder, run_paper_point
 
+export profile_likelihood_interval
+
 include("codes.jl")
 include("generate_samples.jl")
 include("runbenchmark.jl")
 include("paper_inputs.jl")
 include("paper_benchmark.jl")
+include("profile_likelihood.jl")
 end
