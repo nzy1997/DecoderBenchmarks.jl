@@ -38,3 +38,14 @@ benchmark-ldpc-benchcode:
 	./ldpc/run
 
 .PHONY: init generate-error-samples update make-data-path benchmark-TensorQEC benchmark-ldpc generate-plotting-data
+
+.PHONY: paper-smoke paper-logical-full paper-timing-full
+
+paper-smoke:
+	$(JL) paper/run_logical_error.jl smoke
+
+paper-logical-full:
+	$(JL) -p 120 paper/run_logical_error.jl full
+
+paper-timing-full:
+	$(JL) paper/run_timing.jl full
