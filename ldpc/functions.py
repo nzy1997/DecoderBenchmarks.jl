@@ -1,4 +1,5 @@
 import json
+import hashlib
 import math
 import os
 import time
@@ -7,6 +8,40 @@ from datetime import datetime
 
 import numpy as np
 from ldpc import BpOsdDecoder
+
+
+BP_OSD_PARAMETERS = {
+    "decoder": "BP-OSD",
+    "prior": "matched_per_point",
+    "bp_method": "product_sum",
+    "bp_schedule": "serial",
+    "bp_max_iter": 100,
+    "osd_method": "OSD_0",
+    "osd_order": 0,
+}
+
+
+def worker_seed(base_seed, distance, physical_error_rate, worker_index):
+    if worker_index < 0:
+        raise ValueError("worker_index must be non-negative")
+    payload = (
+        f"{int(base_seed)}:{int(distance)}:"
+        f"{float(physical_error_rate)!r}:{int(worker_index)}"
+    )
+    digest = hashlib.sha256(payload.encode("utf-8")).digest()
+    return int.from_bytes(digest[:8], byteorder="big", signed=False)
+
+
+def make_bp_osd_decoder(check_matrix, physical_error_rate):
+    return BpOsdDecoder(
+        check_matrix,
+        error_rate=physical_error_rate,
+        bp_method=BP_OSD_PARAMETERS["bp_method"],
+        max_iter=BP_OSD_PARAMETERS["bp_max_iter"],
+        schedule=BP_OSD_PARAMETERS["bp_schedule"],
+        osd_method=BP_OSD_PARAMETERS["osd_method"],
+        osd_order=BP_OSD_PARAMETERS["osd_order"],
+    )
 
 def load_e(path):
     file = open(path, 'r')
@@ -62,15 +97,7 @@ def _init_worker(H, l, n, seed_base):
 def _get_decoder(state, error_rate):
     decoder = state["decoders"].get(error_rate)
     if decoder is None:
-        decoder = BpOsdDecoder(
-            state["H"],
-            error_rate=error_rate,
-            bp_method="product_sum",
-            max_iter=100,
-            schedule="serial",
-            osd_method="OSD_0",  # set to OSD_0 for fast solve
-            osd_order=0,
-        )
+        decoder = make_bp_osd_decoder(state["H"], error_rate)
         state["decoders"][error_rate] = decoder
     return decoder
 
@@ -93,15 +120,51 @@ def _run_chunk_with_state(state, p, max_sim, max_error, batch_size):
         e_batch = _sample_depolarizing_batch(state, p, batch)
         for i in range(batch):
             syn = state["H"] @ np.transpose(e_batch[i, :]) % 2
-            start_time = time.time()
+            start_time = time.perf_counter()
             decoding = decoder.decode(syn)
-            time_sum += time.time() - start_time
+            time_sum += time.perf_counter() - start_time
             nsim += 1
+            if not np.array_equal(state["H"] @ decoding % 2, syn):
+                raise AssertionError("Decoded syndrome does not match.")
             if check_logical_error(decoding, e_batch[i, :], state["l"]):
                 error_count += 1
             if error_count >= max_error or nsim >= max_sim:
                 break
     return time_sum, nsim, error_count
+
+
+def run_seeded_worker(
+    check_matrix,
+    logicals,
+    distance,
+    physical_error_rate,
+    max_sim,
+    max_error,
+    base_seed,
+    worker_index,
+):
+    seed = worker_seed(base_seed, distance, physical_error_rate, worker_index)
+    state = {
+        "H": np.asarray(check_matrix, dtype=np.uint8),
+        "l": np.asarray(logicals, dtype=np.uint8),
+        "n": np.asarray(check_matrix).shape[1] // 2,
+        "decoders": {},
+        "rng": np.random.default_rng(seed),
+    }
+    time_sum, nsim, error_count = _run_chunk_with_state(
+        state,
+        float(physical_error_rate),
+        int(max_sim),
+        int(max_error),
+        _DEFAULT_BATCH_SIZE,
+    )
+    return {
+        "nsim": nsim,
+        "error_count": error_count,
+        "decode_seconds": time_sum,
+        "seed": seed,
+        "worker_index": int(worker_index),
+    }
 
 
 def _benchmark_chunk(job):
