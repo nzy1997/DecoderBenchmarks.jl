@@ -1910,6 +1910,15 @@
       "matching_weights": "unweighted"
     }
   },
+  "noise_model": {
+    "name": "independent_depolarizing_pauli",
+    "single_qubit_probabilities": {
+      "I": "1-p",
+      "X": "p/3",
+      "Y": "p/3",
+      "Z": "p/3"
+    }
+  },
   "schema_version": 1,
   "seed_status": "not_recorded",
   "selection": {
@@ -1925,6 +1934,12 @@
   "statistics": {
     "interval": "profile likelihood",
     "likelihood_ratio": 1000.0
+  },
+  "stopping_rule": {
+    "parallel_budget": "ceil_remaining_per_worker_then_sum",
+    "maximum_aggregate_failures": "maximum_failures + workers - 1",
+    "maximum_aggregate_samples": "maximum_samples + workers - 1",
+    "explanation": "Before each parallel round, the remaining sample and failure budgets are ceiling-divided across workers. Aggregated nsim and error_count can therefore exceed the nominal limits recorded in the source filename by at most workers - 1."
   },
   "timing": {
     "included": [

@@ -11,6 +11,19 @@ using Test
     @test metadata["environment"]["cpu"] == "not_recorded"
     @test metadata["environment"]["os"] == "not_recorded"
     @test metadata["input_provenance"]["status"] == "not_recorded"
+    @test metadata["noise_model"]["name"] == "independent_depolarizing_pauli"
+    @test metadata["noise_model"]["single_qubit_probabilities"] == Dict(
+        "I" => "1-p",
+        "X" => "p/3",
+        "Y" => "p/3",
+        "Z" => "p/3",
+    )
+    @test metadata["stopping_rule"]["parallel_budget"] ==
+        "ceil_remaining_per_worker_then_sum"
+    @test metadata["stopping_rule"]["maximum_aggregate_failures"] ==
+        "maximum_failures + workers - 1"
+    @test metadata["stopping_rule"]["maximum_aggregate_samples"] ==
+        "maximum_samples + workers - 1"
     @test metadata["source_commits"]["DecoderBenchmarks"] ==
         "7a7d3bddbc98bc7b2f2d36ba49edd05dcf63de2d"
     @test metadata["source_commits"]["TensorQEC"] ==
@@ -21,6 +34,21 @@ using Test
     @test count(entry -> entry["kind"] == "unitary_timing", entries) == 4
     @test count(entry -> entry["kind"] == "bposd_timing", entries) == 4
     @test count(entry -> entry["kind"] == "bposd_logical", entries) == 68
+
+    logical_entries = filter(
+        entry -> entry["kind"] in ("unitary_logical", "bposd_logical"),
+        entries,
+    )
+    @test maximum(maximum(entry["failures"]) for entry in logical_entries) == 2_089
+    for entry in logical_entries
+        worker_match = match(r"workers=(\d+)", entry["original_basename"])
+        @test worker_match !== nothing
+        worker_count = parse(Int, only(worker_match.captures))
+        @test maximum(entry["failures"]) <=
+            entry["maximum_failures"] + worker_count - 1
+        @test maximum(entry["nsim"]) <=
+            entry["maximum_samples"] + worker_count - 1
+    end
 
     archive_root = paper_archive_root()
     for entry in entries

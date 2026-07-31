@@ -20,6 +20,9 @@ include(normpath(joinpath(@__DIR__, "..", "paper", "export_normalized.jl")))
         @test payload["seed_status"] == "not_recorded"
         @test payload["provenance"]["environment"]["status"] == "not_recorded"
         @test payload["provenance"]["input_provenance"]["status"] == "not_recorded"
+        metadata = archive_metadata()
+        @test payload["provenance"]["noise_model"] == metadata["noise_model"]
+        @test payload["provenance"]["stopping_rule"] == metadata["stopping_rule"]
         @test payload["distances"] == [4, 6, 8, 10]
 
         unitary = payload["logical_error"]["4"]["unitary"]
