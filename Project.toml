@@ -4,28 +4,39 @@ version = "1.0.0-DEV"
 authors = ["nzy1997"]
 
 [deps]
+CodecZlib = "944b1d66-785c-5afd-91f1-9de20f533193"
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
 Distributed = "8ba89e20-285c-5b6f-9357-94700520ee1b"
 Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+SHA = "ea8e919c-243c-51af-8825-aaa63cd721ce"
+SparseBlossom = "6f230a4e-3bc1-44f9-946c-fb00ab37aeee"
+Tar = "a4e569a6-e804-4fa4-b0f3-eef7a1d5b13e"
 TensorQEC = "0500ac79-7fb5-4262-aaea-37bb1845d1ef"
 
 [sources]
-TensorQEC = {path = "/Users/nizhongyi/jcode/TensorQEC.jl"}
+SparseBlossom = {url = "https://github.com/nzy1997/PyMatchingWrapper.git", rev = "9306524aada307e9310a6a981834d983ce987503"}
+TensorQEC = {url = "https://github.com/nzy1997/TensorQEC.jl.git", rev = "1eb67a8712d66ad5a6b16895c52b5a0e9089a4c5"}
 
 [compat]
+CodecZlib = "0.7"
 Dates = "1"
 DelimitedFiles = "1"
 Distributed = "1"
 Gurobi = "1"
 JSON = "0.21"
 Random = "1"
-julia = "1"
+SHA = "0.7"
+SparseBlossom = "0.1"
+Tar = "1"
+TensorQEC = "2.2"
+julia = "1.11"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
 
 [targets]
-test = ["Test"]
+test = ["Test", "TOML"]

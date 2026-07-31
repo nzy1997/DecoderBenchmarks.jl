@@ -1,0 +1,1942 @@
+{
+  "dataset_class": "archived",
+  "environment": {
+    "status": "not_recorded",
+    "cpu": "not_recorded",
+    "os": "not_recorded",
+    "julia_version": "not_recorded",
+    "python_version": "not_recorded",
+    "package_versions": "not_recorded",
+    "limitation": "Historical result files contain no runtime environment metadata."
+  },
+  "files": [
+    {
+      "curated_path": "raw/unitary-logical/code=bbx^-1y_4_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "decoder_series": "Layer Decoupling / unweighted MWPM",
+      "distance": 4,
+      "source_file_mtime_utc": "2025-12-26T15:40:32.000Z",
+      "kind": "unitary_logical",
+      "original_basename": "code=bbx^-1y_4_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "sha256": "8604c0b5af32256c75658324b5b9c6a3bc344dd6f9eadb0c2771e2df517492a0",
+      "size_bytes": 737,
+      "source_relative_path": "TensorQEC/code=bbx^-1y_4_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "failures": [
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1088545,
+        531280,
+        209691,
+        102963,
+        49030,
+        17300,
+        9686,
+        7656,
+        4822,
+        3750
+      ],
+      "p_grid": [
+        0.0001,
+        0.0002,
+        0.0005,
+        0.001,
+        0.002,
+        0.005,
+        0.008,
+        0.01,
+        0.015,
+        0.02
+      ]
+    },
+    {
+      "curated_path": "raw/unitary-logical/code=bbx^-1y_6_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "decoder_series": "Layer Decoupling / unweighted MWPM",
+      "distance": 6,
+      "source_file_mtime_utc": "2025-12-26T15:47:36.000Z",
+      "kind": "unitary_logical",
+      "original_basename": "code=bbx^-1y_6_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "sha256": "2beb39a04503b0a312981f2016057b4dfe576a89bebcf1ea9cb1008cd586b7b3",
+      "size_bytes": 763,
+      "source_relative_path": "TensorQEC/code=bbx^-1y_6_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "failures": [
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        177325901,
+        42670036,
+        6424145,
+        1656597,
+        369180,
+        54275,
+        19867,
+        12521,
+        5885,
+        3913
+      ],
+      "p_grid": [
+        0.0001,
+        0.0002,
+        0.0005,
+        0.001,
+        0.002,
+        0.005,
+        0.008,
+        0.01,
+        0.015,
+        0.02
+      ]
+    },
+    {
+      "curated_path": "raw/unitary-logical/code=bbx^-1y_8_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "decoder_series": "Layer Decoupling / unweighted MWPM",
+      "distance": 8,
+      "source_file_mtime_utc": "2025-12-26T16:49:02.000Z",
+      "kind": "unitary_logical",
+      "original_basename": "code=bbx^-1y_8_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "sha256": "d6e1bd487ae0a88e8957c211e8b0e90991643a2dacf47bcc97966622807c1b8d",
+      "size_bytes": 774,
+      "source_relative_path": "TensorQEC/code=bbx^-1y_8_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "failures": [
+        1626,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000031,
+        315093356,
+        44795093,
+        9353273,
+        1740421,
+        150410,
+        41023,
+        22870,
+        8462,
+        4594
+      ],
+      "p_grid": [
+        0.0001,
+        0.0002,
+        0.0005,
+        0.001,
+        0.002,
+        0.005,
+        0.008,
+        0.01,
+        0.015,
+        0.02
+      ]
+    },
+    {
+      "curated_path": "raw/unitary-logical/code=bbx^-1y_10_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "decoder_series": "Layer Decoupling / unweighted MWPM",
+      "distance": 10,
+      "source_file_mtime_utc": "2025-12-26T21:18:24.000Z",
+      "kind": "unitary_logical",
+      "original_basename": "code=bbx^-1y_10_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "sha256": "a5dcc4f17cd5d72f7af7bba85fc7b22cf608ee0823fad1e9f1e65b98567bbb63",
+      "size_bytes": 783,
+      "source_relative_path": "TensorQEC/code=bbx^-1y_10_pmin=0.0001_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=TToricDecoder(Matching).json",
+      "failures": [
+        27,
+        250,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040,
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000080,
+        1000000080,
+        533106993,
+        62552868,
+        6564511,
+        317792,
+        64178,
+        30865,
+        8860,
+        4384
+      ],
+      "p_grid": [
+        0.0001,
+        0.0002,
+        0.0005,
+        0.001,
+        0.002,
+        0.005,
+        0.008,
+        0.01,
+        0.015,
+        0.02
+      ]
+    },
+    {
+      "curated_path": "raw/unitary-timing/Time_code=bbx^-1y_4_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "decoder_series": "Layer Decoupling / unweighted MWPM",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-26T08:25:02.481Z",
+      "kind": "unitary_timing",
+      "original_basename": "Time_code=bbx^-1y_4_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "sha256": "59c4deebfcf33c8a7984db56ae9093baa3f2a656a9ef0567b7d4f5f1ca026911",
+      "size_bytes": 364,
+      "source_relative_path": "TensorQEC/Time_code=bbx^-1y_4_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "p_grid": [
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.04,
+        0.056,
+        0.06,
+        0.12,
+        0.15,
+        0.2
+      ],
+      "samples": 10000
+    },
+    {
+      "curated_path": "raw/unitary-timing/Time_code=bbx^-1y_6_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "decoder_series": "Layer Decoupling / unweighted MWPM",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-26T08:25:08.100Z",
+      "kind": "unitary_timing",
+      "original_basename": "Time_code=bbx^-1y_6_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "sha256": "ce01beec33ab4a399b1322bbd3613f8d339851f463b3cf5810fa7c9eabb8bfe1",
+      "size_bytes": 363,
+      "source_relative_path": "TensorQEC/Time_code=bbx^-1y_6_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "p_grid": [
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.04,
+        0.056,
+        0.06,
+        0.12,
+        0.15,
+        0.2
+      ],
+      "samples": 10000
+    },
+    {
+      "curated_path": "raw/unitary-timing/Time_code=bbx^-1y_8_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "decoder_series": "Layer Decoupling / unweighted MWPM",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-26T08:25:20.408Z",
+      "kind": "unitary_timing",
+      "original_basename": "Time_code=bbx^-1y_8_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "sha256": "3038962dcf9568e95b5dca742c59c735eb63b9b3563508c14edbd71fbdb374e9",
+      "size_bytes": 366,
+      "source_relative_path": "TensorQEC/Time_code=bbx^-1y_8_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "p_grid": [
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.04,
+        0.056,
+        0.06,
+        0.12,
+        0.15,
+        0.2
+      ],
+      "samples": 10000
+    },
+    {
+      "curated_path": "raw/unitary-timing/Time_code=bbx^-1y_10_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "decoder_series": "Layer Decoupling / unweighted MWPM",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-26T08:25:46.147Z",
+      "kind": "unitary_timing",
+      "original_basename": "Time_code=bbx^-1y_10_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "sha256": "6d357e87f5570ed7556e8e31b8e6a4b57a1eeb260c156beabbdfda44d5f1f3a5",
+      "size_bytes": 375,
+      "source_relative_path": "TensorQEC/Time_code=bbx^-1y_10_pmin=0.01_pmax=0.2_nsample=10000_decoder=TToricDecoder(Matching).json",
+      "p_grid": [
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.04,
+        0.056,
+        0.06,
+        0.12,
+        0.15,
+        0.2
+      ],
+      "samples": 10000
+    },
+    {
+      "curated_path": "raw/bposd-timing/Time_code=bbx^-1y_4_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-26T12:20:01.548Z",
+      "kind": "bposd_timing",
+      "original_basename": "Time_code=bbx^-1y_4_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "sha256": "23559fd4161ae72f1d73ac990b66cc14430fd83e11e7738d8b8e97ccdacd0ef0",
+      "size_bytes": 350,
+      "source_relative_path": "ldpc/Time_code=bbx^-1y_4_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "p_grid": [
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.04,
+        0.06,
+        0.12,
+        0.15,
+        0.2
+      ],
+      "samples": 10000
+    },
+    {
+      "curated_path": "raw/bposd-timing/Time_code=bbx^-1y_6_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-26T14:06:24.107Z",
+      "kind": "bposd_timing",
+      "original_basename": "Time_code=bbx^-1y_6_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "sha256": "e3784bbe40daf17b07bd71ca8eec441bec227016ed1b7ce862239cbcba296009",
+      "size_bytes": 345,
+      "source_relative_path": "ldpc/Time_code=bbx^-1y_6_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "p_grid": [
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.04,
+        0.06,
+        0.12,
+        0.15,
+        0.2
+      ],
+      "samples": 10000
+    },
+    {
+      "curated_path": "raw/bposd-timing/Time_code=bbx^-1y_8_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-26T17:29:06.027Z",
+      "kind": "bposd_timing",
+      "original_basename": "Time_code=bbx^-1y_8_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "sha256": "0003f567a45b732b4394dbf914ece932454ef77502ca8e6f3f973e5f926c6caf",
+      "size_bytes": 344,
+      "source_relative_path": "ldpc/Time_code=bbx^-1y_8_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "p_grid": [
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.04,
+        0.06,
+        0.12,
+        0.15,
+        0.2
+      ],
+      "samples": 10000
+    },
+    {
+      "curated_path": "raw/bposd-timing/Time_code=bbx^-1y_10_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-26T23:08:04.797Z",
+      "kind": "bposd_timing",
+      "original_basename": "Time_code=bbx^-1y_10_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "sha256": "3f4bdda49769f737ecf57f1f55e6176bea7f77fa6acd7658ff9aa04c7e966bf8",
+      "size_bytes": 343,
+      "source_relative_path": "ldpc/Time_code=bbx^-1y_10_pmin=0.01_pmax=0.2_nsample=10000_decoder=BpOsdDecoder.json",
+      "p_grid": [
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.04,
+        0.06,
+        0.12,
+        0.15,
+        0.2
+      ],
+      "samples": 10000
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-13T05:15:25.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "a410155e3052f7f409a5c4d7330a71664a80eccd940c192536cbab52e01179dc",
+      "size_bytes": 214,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0001
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-13T05:15:28.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "bd6fe88111d017e3765e02a0d7bb00a4a6d9bb91a19737912b6a61cd066f0148",
+      "size_bytes": 213,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0002
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-13T05:15:30.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "79f77d443041694b2f9497f6527156836915a0044abd5ab42fd2cd7706df24b9",
+      "size_bytes": 214,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0005
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-13T05:15:54.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "3df8c8eef22a649ee781d8ec147716204ead5f87d7895739b27a1b5eadd90cfe",
+      "size_bytes": 211,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.001
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-13T05:16:45.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "10302a8ca0945d5a525aa4d3971d80edd45ad30d72ad1461bcf32f965bbd543e",
+      "size_bytes": 212,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.002
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-13T05:16:05.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "34f3b95e8ec08662a0507b15a90fbe612266ce01fafa292041e454398c94078e",
+      "size_bytes": 214,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        10
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.005
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-13T05:20:06.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "4be5c6000b661a88ffd845468b038bbb62e98f7fc678c1c5f144a1b413a3427f",
+      "size_bytes": 217,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        31
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.008
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-14T06:34:32.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "5af2490aadd5094ea4144fa808a16afe334cd01508d2659294bc49224ef8257d",
+      "size_bytes": 235,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        118058892
+      ],
+      "p_grid": [
+        0.01
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-14T06:35:08.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "77dedaa52ccc13c579c4d79fb05a914225f59419b4cda9b3c0f0ab546675f325",
+      "size_bytes": 234,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        54284578
+      ],
+      "p_grid": [
+        0.015
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-14T06:26:02.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "b8bf193cc83b16fd2fc4fdf56527faac00052e8180a53bd3fe0745e2ff5d974e",
+      "size_bytes": 234,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        14620140
+      ],
+      "p_grid": [
+        0.02
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-14T06:24:01.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "eccfff68535472b5a6fb0ee261845da04a3670e238c1cfdace8a921b6c378988",
+      "size_bytes": 232,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        2975601
+      ],
+      "p_grid": [
+        0.03
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-14T06:23:21.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "6551fa5c70c24c7b6292ae98a00cda9a5628f797420e06e96fa2dbf6cbe7e78d",
+      "size_bytes": 230,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        720036
+      ],
+      "p_grid": [
+        0.04
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-14T06:22:51.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "f1376a084dab3ed3e9537838e59050286373f7409ee864f366e0a263f0bdccfc",
+      "size_bytes": 230,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        128931
+      ],
+      "p_grid": [
+        0.056
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-14T06:22:49.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "cb76db4cd4b50f43328c064dee2200ddd873b964bcb441c41be1bc01bbf4ff2d",
+      "size_bytes": 228,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        93040
+      ],
+      "p_grid": [
+        0.06
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-14T06:22:24.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "d4ac835fbca843a20930d8f7974ad566c9631e0e22a2ccb698c3d6a49094d2b8",
+      "size_bytes": 223,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        4144
+      ],
+      "p_grid": [
+        0.12
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-14T06:22:31.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "ba7204e449f4d1a6db73963a0e4319efaf513fddeea1804225c3ed674a6e1988",
+      "size_bytes": 224,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        2539
+      ],
+      "p_grid": [
+        0.15
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d4/code=bbx_d4_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 4,
+      "source_file_mtime_utc": "2026-01-14T06:22:36.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d4_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "5b3cacf326f83c5e2d0fab535f71a8846494ac9c5874367d3f15c03a26f7109d",
+      "size_bytes": 222,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d4_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        2079
+      ],
+      "p_grid": [
+        0.2
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-13T05:21:27.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "f7e1da6789f3301fcb0be32ab465522a7e595de6bdc50ee01154b9057e27988f",
+      "size_bytes": 213,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0001
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-13T05:21:26.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "d0e73022461fbff7d6859ca5d3f260b1c9ad6eddc293a3e3b4d2202ff4eb9e12",
+      "size_bytes": 214,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0002
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-13T05:21:33.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "4703fc6e170d1cbc35d387cf3179a526c363fbdb61f8a38a812aff7776f781fe",
+      "size_bytes": 213,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0005
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-13T05:21:51.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "2be78bfd9d4d7d7a61d750de78168040198b699335c1c36f4d2a2b8571f3dae7",
+      "size_bytes": 211,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.001
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-13T05:28:11.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "d14335e9aa7864dc45f140e235f38f6328dbc100ca54cc615b695bb5bd646bce",
+      "size_bytes": 211,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.002
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-13T05:26:12.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "058db4aeae556859ef51c1967012e347b6e0f068d28e273790d84e07dbc27469",
+      "size_bytes": 212,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.005
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-13T05:25:14.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "12e1ae055485b96f7410007bac32bc182366c943a48099e928aaced70cd1d269",
+      "size_bytes": 211,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.008
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-14T11:28:18.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "ee336206d12dea74729b05b9c011c3340b06642aec1ee6a1ee1bf57536f16719",
+      "size_bytes": 232,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        64
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000080
+      ],
+      "p_grid": [
+        0.01
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-17T09:48:48.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "7122e1348674f0b31731195cc35c46a030aa6c5b4055d0d2efcd1cfceae6a06d",
+      "size_bytes": 235,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        524
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000080
+      ],
+      "p_grid": [
+        0.015
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-14T16:59:13.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "10d46baf368388bcd00657e3484a3f304a782669774563494373d9186bf790b6",
+      "size_bytes": 233,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2089
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        874206107
+      ],
+      "p_grid": [
+        0.02
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-14T08:18:28.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "1bdbba041f8f029f855f4135c205ab938c172fee1498de095656020e511f4c25",
+      "size_bytes": 233,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        72488254
+      ],
+      "p_grid": [
+        0.03
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-14T07:05:41.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "631742520b2e8c186802386245c2399bd4dd75bcb7af65cf74440759446d30b5",
+      "size_bytes": 232,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        9990082
+      ],
+      "p_grid": [
+        0.04
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-14T06:36:15.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "05f3c734a1ad3a758824b07656094bddd0ae4c85600bfa4fb2df7dd7d9ecdd6d",
+      "size_bytes": 231,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        861106
+      ],
+      "p_grid": [
+        0.056
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-14T06:42:04.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "d0df0f96f95d0929d49333b9af954cf33945fc9fdbb093571ff7ce5461413781",
+      "size_bytes": 229,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        512123
+      ],
+      "p_grid": [
+        0.06
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-14T06:35:32.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "1204d55636cc8454fb6bc9879eb3522fb37456a67d4abd583e05d38586575923",
+      "size_bytes": 225,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        4445
+      ],
+      "p_grid": [
+        0.12
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-14T06:35:45.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "d84acf8412a2f02ab38d4a8a4152202b0dc3a37ddec1d042262c78cfef00ba02",
+      "size_bytes": 223,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        2390
+      ],
+      "p_grid": [
+        0.15
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d6/code=bbx_d6_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 6,
+      "source_file_mtime_utc": "2026-01-14T06:35:57.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d6_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "da58cfd7dbae026bea0e35db43950f27d3bcafc3e643d5302b2b00b096328850",
+      "size_bytes": 222,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d6_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        2062
+      ],
+      "p_grid": [
+        0.2
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-13T05:48:40.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "8a8c8d4d46c1b15310b530eae93efe7d9eb3168b3c6282d4210e4b94b7360176",
+      "size_bytes": 213,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0001
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-13T05:47:03.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "db37f1aed6bbec5089711a942f20df85b8764561fca8859857839ae5131e1c38",
+      "size_bytes": 213,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0002
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-13T06:01:51.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "ccbbf5ff1826e0b24646fcab8d31b05e6f1376b02aaef1123e26bcebfe613c58",
+      "size_bytes": 213,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0005
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-13T06:03:29.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "0cc83ea62e4295a1971af9961d06085821998a9e8adfac7ed24c93cb88bd46c8",
+      "size_bytes": 210,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.001
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-13T06:05:08.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "f26fa4415f4ff8b5e10b3613e85cd22318f48dd8f9ed0bfaaa123946c51d601b",
+      "size_bytes": 210,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.002
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-13T06:07:33.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "0836af544bd28dbb1c52a85af504d0a61d5f487cdb076e34f8dd075f41a6f7c2",
+      "size_bytes": 211,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.005
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-13T06:16:57.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "d38d10ea14206993d77d1a6505a76ac4cdda7d87a05ada463c686274362131b9",
+      "size_bytes": 213,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        1
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.008
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-14T20:58:41.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "3f21ce64630f55a959c66783317f5e29ebffd0eec78a4d9ab67c7d895d69b322",
+      "size_bytes": 234,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        143
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000080
+      ],
+      "p_grid": [
+        0.01
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-15T09:18:08.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "98531f78f99161e637a7dfa7402df1cd37aae12ebc38d7dfc1741b54de3892d0",
+      "size_bytes": 234,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        327
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000080
+      ],
+      "p_grid": [
+        0.015
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-15T11:19:58.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "36d69110b916c769d72b7d3ab6bfdd3fd355aa51a674b189d196b769fcfe49d2",
+      "size_bytes": 233,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        673
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000080
+      ],
+      "p_grid": [
+        0.02
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-15T15:42:21.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "92d11d8c273f1b405469480b9a0bb10038f8968a1c9edacfee02a71fc719ec9b",
+      "size_bytes": 232,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        517560826
+      ],
+      "p_grid": [
+        0.03
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-14T18:28:40.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "187404cb4f8b5d9fb8c84eb01dc2d21e74882cc6f971a20a8ebfbfd0170e98d0",
+      "size_bytes": 232,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        70830850
+      ],
+      "p_grid": [
+        0.04
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-14T13:26:49.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "729454e8f2f84d826380facb36a1b034ca523ba7d1c6f697a22d3e350a0b2ce6",
+      "size_bytes": 232,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        3850917
+      ],
+      "p_grid": [
+        0.056
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-14T14:43:04.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "185425c4328dd779aa720a25fcc08b0b8687102039f5dcd976a3ef8ad8d6aacf",
+      "size_bytes": 230,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        2083145
+      ],
+      "p_grid": [
+        0.06
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-14T14:43:50.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "0742770248ce370568c0766960ae279975aecf544d6f5be619ec308ab4dbe362",
+      "size_bytes": 224,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        4816
+      ],
+      "p_grid": [
+        0.12
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-14T14:44:13.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "df4eab493c5c6aae0f263ac2db02ddc7211cb812863e18e633fad2b8061f9c0f",
+      "size_bytes": 223,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        2309
+      ],
+      "p_grid": [
+        0.15
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d8/code=bbx_d8_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 8,
+      "source_file_mtime_utc": "2026-01-14T14:44:35.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d8_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "5bf6ab74bed14436450fe3e88d1d830c8f0c7e4986f397ff31986ea1c9eb1d0a",
+      "size_bytes": 221,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d8_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        2050
+      ],
+      "p_grid": [
+        0.2
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-13T08:45:02.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "c072d3f7c583253da9ffb337c16383fc046c12ceaacfe8ef0ccfade0b98aec43",
+      "size_bytes": 215,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.0001_pmin=0.0001_pmax=0.0001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0001
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-13T09:48:28.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "31441bdb376b88a3e71c2d98b36d9f69dbd9ea0c49ab670883e30e34efa54b33",
+      "size_bytes": 214,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.0002_pmin=0.0002_pmax=0.0002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0002
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-13T08:26:49.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "2b649205c3e40080a4802f5bd9d293e17daa50bd7cc3174d7f51cc5578f1ff39",
+      "size_bytes": 214,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.0005_pmin=0.0005_pmax=0.0005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.0005
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-13T08:27:03.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "5445d63e6a7028eb480e9fe693d12fba6fdfb989fe26fbfca23757938c55258a",
+      "size_bytes": 213,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.001_pmin=0.001_pmax=0.001_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.001
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-13T10:53:54.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "0dfcb18bdaa3d3e48c768366ed98cd2ff81ecfceba1701e7ae799101e0a7b47c",
+      "size_bytes": 211,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.002_pmin=0.002_pmax=0.002_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.002
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-13T08:51:38.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "d03ccbcdf4217ddc2e126578754e60db37db579fd003a4076c591b95c84e9371",
+      "size_bytes": 211,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.005_pmin=0.005_pmax=0.005_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.005
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-13T09:04:52.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "sha256": "b9a494cd7e7355358791fed9ae69660c1623a0d2d0d24a065ddc165e4eaf9664",
+      "size_bytes": 212,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.008_pmin=0.008_pmax=0.008_nsample=10000000_maxerror=200_workers=16_decoder=BpOsdDecoder.json",
+      "failures": [
+        0
+      ],
+      "maximum_failures": 200,
+      "maximum_samples": 10000000,
+      "nsim": [
+        10000000
+      ],
+      "p_grid": [
+        0.008
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-17T14:14:02.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "a5cb97c0e89d132d1085d6559fc6a9f37804a079371b78dca9ecac65fb056cae",
+      "size_bytes": 232,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.01_pmin=0.01_pmax=0.01_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        3
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000080
+      ],
+      "p_grid": [
+        0.01
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-18T19:19:43.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "913983fc2fca728d3306c09da2b63e3d3c868b7f5b9a3963b7c040ea547978f2",
+      "size_bytes": 235,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.015_pmin=0.015_pmax=0.015_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        25
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000080
+      ],
+      "p_grid": [
+        0.015
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-18T16:51:23.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "7da0a46a94589cbd81787283f2bec2e4a8d9800e7e5194d643bfa55dd04bd36b",
+      "size_bytes": 233,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.02_pmin=0.02_pmax=0.02_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        139
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000080
+      ],
+      "p_grid": [
+        0.02
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-20T23:12:44.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "38a18a5dc8f6342156c7968e3aa2bdffe3dbeaced4766684cb914661f30b6074",
+      "size_bytes": 229,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.03_pmin=0.03_pmax=0.03_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        1560
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        1000000007
+      ],
+      "p_grid": [
+        0.03
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-18T10:25:05.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "396b25c2c3afe7a40104cf4dac572cd7c589a7eb556f019459ce5651621ab7c3",
+      "size_bytes": 234,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.04_pmin=0.04_pmax=0.04_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        183056762
+      ],
+      "p_grid": [
+        0.04
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-16T00:25:20.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "948a17edd397cfa2297d57fd499c363d0daa5a5eddc2578984ab40488f200b1b",
+      "size_bytes": 235,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.056_pmin=0.056_pmax=0.056_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        11275640
+      ],
+      "p_grid": [
+        0.056
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-16T00:38:03.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "78ef268da1a639b1577bdb34507d7ef56873ee932bb8f8160a3b627ee767c501",
+      "size_bytes": 231,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.06_pmin=0.06_pmax=0.06_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        5731103
+      ],
+      "p_grid": [
+        0.06
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-16T00:26:49.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "f9feb573665037e0982785dc52a45ae49811b11451b41a977a1f297aeb7f2ec2",
+      "size_bytes": 224,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.12_pmin=0.12_pmax=0.12_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        4870
+      ],
+      "p_grid": [
+        0.12
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-16T00:27:25.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "5e2eb7d1503cd893397681dc6061b2e725e8dde589b76709137bae1adf8c4781",
+      "size_bytes": 224,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.15_pmin=0.15_pmax=0.15_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        2184
+      ],
+      "p_grid": [
+        0.15
+      ]
+    },
+    {
+      "curated_path": "raw/bposd-logical/d10/code=bbx_d10_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "decoder_series": "BP-OSD",
+      "distance": 10,
+      "source_file_mtime_utc": "2026-01-16T00:27:59.000Z",
+      "kind": "bposd_logical",
+      "original_basename": "code=bbx_d10_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "sha256": "4652511804ac58bad6876ad643ce5ec83f19dfe6bceed931b93a6f70c73d0138",
+      "size_bytes": 222,
+      "source_relative_path": "ldpc/ldpc/code=bbx_d10_p0.2_pmin=0.2_pmax=0.2_nsample=1000000000_maxerror=2000_workers=120_decoder=BpOsdDecoder.json",
+      "failures": [
+        2040
+      ],
+      "maximum_failures": 2000,
+      "maximum_samples": 1000000000,
+      "nsim": [
+        2042
+      ],
+      "p_grid": [
+        0.2
+      ]
+    }
+  ],
+  "input_provenance": {
+    "status": "not_recorded",
+    "limitation": "The original matrix-generation command and source revision were not recorded; the curated input archives are preserved by SHA-256."
+  },
+  "methods": {
+    "bposd": {
+      "decoder": "BP-OSD",
+      "osd_method": "OSD_0",
+      "osd_order": 0,
+      "prior": "matched_per_point",
+      "serial_schedule": true,
+      "bp_iterations": 100,
+      "product_sum": true
+    },
+    "unitary": {
+      "decoder": "TToricDecoder(Matching)",
+      "matching_weights": "unweighted"
+    }
+  },
+  "schema_version": 1,
+  "seed_status": "not_recorded",
+  "selection": {
+    "bposd_logical": "largest recorded nsim for each (distance, p); ties are rejected",
+    "bposd_timing": "10,000-sample timing series for distances 4, 6, 8, and 10",
+    "unitary_logical": "maximum_samples=1,000,000,000, maximum_failures=2,000, workers=120",
+    "unitary_timing": "10,000-sample timing series for distances 4, 6, 8, and 10"
+  },
+  "source_commits": {
+    "DecoderBenchmarks": "7a7d3bddbc98bc7b2f2d36ba49edd05dcf63de2d",
+    "TensorQEC": "9ffb8a918614efe4efeaeaafc7017da876af603d"
+  },
+  "statistics": {
+    "interval": "profile likelihood",
+    "likelihood_ratio": 1000.0
+  },
+  "timing": {
+    "included": [
+      "decoder call"
+    ],
+    "excluded": [
+      "compilation",
+      "error sampling",
+      "syndrome generation",
+      "syndrome validation",
+      "process startup",
+      "file I/O"
+    ]
+  }
+}

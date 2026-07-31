@@ -1,0 +1,1 @@
+{"pvec": [0.04], "nsample": 1000000000, "max_error": 2000, "nsim": [9990082], "error_count": [2040], "time_res": [0.019883754668675795], "error_rate": [0.00020420252806733718], "decoder": "BpOsdDecoder", "code_name": "bbx_d6_p0.04"}

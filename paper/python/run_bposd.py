@@ -46,6 +46,22 @@ PAPER_DISTANCES = (4, 6, 8, 10)
 PAPER_SEED = 20260607
 
 
+def positive_int(value):
+    parsed = int(value)
+    if parsed < 1:
+        raise argparse.ArgumentTypeError("value must be a positive integer")
+    return parsed
+
+
+def probability(value):
+    parsed = float(value)
+    if not math.isfinite(parsed) or not 0.0 <= parsed <= 1.0:
+        raise argparse.ArgumentTypeError(
+            "physical error rate must be finite and between 0 and 1"
+        )
+    return parsed
+
+
 def _dense_uint8(matrix):
     if hasattr(matrix, "toarray"):
         matrix = matrix.toarray()
@@ -180,6 +196,16 @@ def run_bposd_point(
 ):
     if workers < 1:
         raise ValueError("workers must be positive")
+    if max_sim < 1:
+        raise ValueError("max_sim must be positive")
+    if max_error < 1:
+        raise ValueError("max_error must be positive")
+    if not math.isfinite(physical_error_rate) or not (
+        0.0 <= physical_error_rate <= 1.0
+    ):
+        raise ValueError(
+            "physical_error_rate must be finite and between 0 and 1"
+        )
     simulations, extra = divmod(max_sim, workers)
     worker_max_error = max(1, math.ceil(max_error / workers))
     jobs = [
@@ -215,17 +241,17 @@ def run_bposd_point(
     return result
 
 
-def parse_arguments():
+def parse_arguments(argv=None):
     parser = argparse.ArgumentParser(description="Run the seeded paper BP-OSD benchmark.")
     parser.add_argument("--mode", choices=("smoke", "full"), required=True)
     parser.add_argument("--distance", type=int, choices=PAPER_DISTANCES, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--physical-error-rate", type=float)
-    parser.add_argument("--workers", type=int, default=1)
+    parser.add_argument("--physical-error-rate", type=probability)
+    parser.add_argument("--workers", type=positive_int, default=1)
     parser.add_argument("--seed", type=int, default=PAPER_SEED)
-    parser.add_argument("--max-sim", type=int)
-    parser.add_argument("--max-error", type=int)
-    return parser.parse_args()
+    parser.add_argument("--max-sim", type=positive_int)
+    parser.add_argument("--max-error", type=positive_int)
+    return parser.parse_args(argv)
 
 
 def main():

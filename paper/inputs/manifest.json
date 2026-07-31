@@ -1,6 +1,10 @@
 {
   "schema_version": 1,
   "code_family": "bbx^-1y",
+  "provenance": {
+    "status": "not_recorded",
+    "limitation": "The original matrix-generation command and source revision were not recorded; these curated archives are preserved by SHA-256."
+  },
   "distances": {
     "4": {
       "archive": "d4.tar.gz",

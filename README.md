@@ -4,6 +4,42 @@
 
 This repository contains the code for generating the samples for benchmarking the decoder performance. It is based on the [TensorQEC](https://github.com/nzy1997/TensorQEC.jl) package.
 
+## Topological CSS paper snapshot
+
+The `paper/topological-css-decoder` branch preserves the benchmark pipeline
+used by the topological CSS code decoupling article. It pins TensorQEC tag
+`paper-decoder-2026.1` at commit
+`1eb67a8712d66ad5a6b16895c52b5a0e9089a4c5` and builds the public
+SparseBlossom wrapper locally from source.
+
+This snapshot requires Julia 1.11 or later and Python 3.13 for the locked
+BP-OSD environment. Set up both environments, verify BP-OSD, and run all
+deterministic smoke benchmarks with:
+
+```bash
+julia --project -e 'using Pkg; Pkg.instantiate(; allow_autoprecomp=false); Pkg.build("SparseBlossom")'
+make paper-python-init
+make paper-bposd-test
+make paper-smoke
+```
+
+The smoke preset uses distance 4 and a fixed seed. It runs five BP-OSD shots,
+32 unitary-decouple logical-error shots, and four timed unitary-decouple calls
+after one warm-up. Generated output is written below `build/paper/smoke/`.
+
+Verify the curated article archive and export canonical normalized JSON with:
+
+```bash
+julia --project -e 'using Pkg; Pkg.test()'
+julia --project paper/export_normalized.jl build/paper/export
+```
+
+The checked-in archive is historical data whose random seeds, runtime
+environment, and original matrix-generation command were not recorded.
+Checksums preserve the exact selected files and inputs, but newly seeded smoke
+or full runs are new reproductions rather than bit-for-bit regeneration of the
+archived Monte Carlo counts.
+
 ## Usage
 
 Clone the repository and run the following command in the root directory to install the dependencies:

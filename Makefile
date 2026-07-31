@@ -1,4 +1,7 @@
 JL = julia --project
+PYTHON ?= python3
+PAPER_VENV ?= build/paper/python-env
+PAPER_PYTHON ?= $(PAPER_VENV)/bin/python
 maxerror ?= $(nsample)
 
 init:
@@ -39,10 +42,22 @@ benchmark-ldpc-benchcode:
 
 .PHONY: init generate-error-samples update make-data-path benchmark-TensorQEC benchmark-ldpc generate-plotting-data
 
+.PHONY: paper-python-init paper-bposd-test paper-bposd-smoke
 .PHONY: paper-smoke paper-logical-full paper-timing-full
 
-paper-smoke:
+paper-python-init:
+	$(PYTHON) -m venv $(PAPER_VENV)
+	$(PAPER_PYTHON) -m pip install -r paper/python/requirements-lock.txt
+
+paper-bposd-test:
+	$(PAPER_PYTHON) -m unittest paper/python/test_run_bposd.py -v
+
+paper-bposd-smoke:
+	$(PAPER_PYTHON) paper/python/run_bposd.py --mode smoke --distance 4 --physical-error-rate 0.01 --output build/paper/smoke/bposd-d4-p0.01.json
+
+paper-smoke: paper-bposd-smoke
 	$(JL) paper/run_logical_error.jl smoke
+	$(JL) paper/run_timing.jl smoke
 
 paper-logical-full:
 	$(JL) -p 120 paper/run_logical_error.jl full

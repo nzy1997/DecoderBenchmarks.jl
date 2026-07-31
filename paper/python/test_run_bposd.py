@@ -1,7 +1,9 @@
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stderr
 from importlib import metadata
+from io import StringIO
 from pathlib import Path
 
 import numpy as np
@@ -12,6 +14,7 @@ from run_bposd import (
     BPOSD_LOGICAL_GRID,
     BPOSD_TIMING_GRID,
     load_paper_code,
+    parse_arguments,
     run_bposd_point,
     run_seeded_worker,
     worker_seed,
@@ -53,6 +56,7 @@ class SeededBpOsdTests(unittest.TestCase):
         first = run_seeded_worker(**arguments)
         second = run_seeded_worker(**arguments)
         self.assertEqual(first["nsim"], 5)
+        self.assertEqual(first["error_count"], 0)
         self.assertEqual(first["nsim"], second["nsim"])
         self.assertEqual(first["error_count"], second["error_count"])
         self.assertEqual(first["seed"], second["seed"])
@@ -68,6 +72,8 @@ class SeededBpOsdTests(unittest.TestCase):
             workers=1,
         )
         self.assertEqual(point["decoder"], "BP-OSD")
+        self.assertEqual(point["nsim"], 5)
+        self.assertEqual(point["error_count"], 0)
         self.assertEqual(point["prior"], "matched_per_point")
         self.assertEqual(point["physical_error_rate"], 0.01)
         self.assertEqual(point["bp_method"], "product_sum")
@@ -95,6 +101,51 @@ class SeededBpOsdTests(unittest.TestCase):
             BPOSD_TIMING_GRID,
             [0.01, 0.015, 0.02, 0.03, 0.04, 0.06, 0.12, 0.15, 0.2],
         )
+
+    def test_invalid_cli_limits_and_probability_are_rejected(self):
+        required = [
+            "--mode", "smoke",
+            "--distance", "4",
+            "--output", "result.json",
+        ]
+        for invalid in (
+            ["--max-sim", "0"],
+            ["--max-error", "-1"],
+            ["--workers", "0"],
+            ["--physical-error-rate", "nan"],
+            ["--physical-error-rate", "-0.01"],
+            ["--physical-error-rate", "1.01"],
+        ):
+            with self.subTest(arguments=invalid):
+                with redirect_stderr(StringIO()):
+                    with self.assertRaises(SystemExit):
+                        parse_arguments(required + invalid)
+
+    def test_invalid_direct_point_limits_are_rejected(self):
+        check_matrix = np.zeros((2, 4), dtype=np.uint8)
+        logicals = np.zeros((2, 4), dtype=np.uint8)
+        base = dict(
+            check_matrix=check_matrix,
+            logicals=logicals,
+            distance=4,
+            physical_error_rate=0.01,
+            max_sim=5,
+            max_error=5,
+            base_seed=20260607,
+            workers=1,
+        )
+        for field, value in (
+            ("max_sim", 0),
+            ("max_error", 0),
+            ("workers", 0),
+            ("physical_error_rate", float("nan")),
+            ("physical_error_rate", -0.01),
+            ("physical_error_rate", 1.01),
+        ):
+            with self.subTest(field=field, value=value):
+                arguments = {**base, field: value}
+                with self.assertRaises(ValueError):
+                    run_bposd_point(**arguments)
 
     def test_decoder_environment_matches_lock(self):
         lock = (Path(__file__).resolve().parent / "requirements-lock.txt").read_text()

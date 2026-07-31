@@ -1,0 +1,1 @@
+{"pvec": [0.02], "nsample": 1000000000, "max_error": 2000, "nsim": [1000000080], "error_count": [673], "time_res": [0.006908732993881437], "error_rate": [6.729999461600043e-07], "decoder": "BpOsdDecoder", "code_name": "bbx_d8_p0.02"}

@@ -21,10 +21,14 @@ export paper_decoder, run_paper_point
 
 export profile_likelihood_interval
 
+export paper_archive_root, archive_metadata, verified_archive_entries
+export archived_unitary_point, archived_unitary_time
+
 include("codes.jl")
 include("generate_samples.jl")
 include("runbenchmark.jl")
 include("paper_inputs.jl")
 include("paper_benchmark.jl")
 include("profile_likelihood.jl")
+include("paper_archive.jl")
 end

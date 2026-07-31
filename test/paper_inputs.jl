@@ -7,6 +7,8 @@ using Test
 @testset "paper input manifest" begin
     root = normpath(joinpath(@__DIR__, ".."))
     manifest = JSON.parsefile(joinpath(root, "paper", "inputs", "manifest.json"))
+    @test manifest["provenance"]["status"] == "not_recorded"
+    @test occursin("not recorded", lowercase(manifest["provenance"]["limitation"]))
     @test sort(parse.(Int, collect(keys(manifest["distances"])))) == [4, 6, 8, 10]
     for distance in (4, 6, 8, 10)
         entry = manifest["distances"][string(distance)]
